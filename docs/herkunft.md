@@ -42,7 +42,7 @@ Die vollständige frühere Vergleichsanalyse verbleibt im Vorgängerprojekt. Die
 | Porträts A | Vorhandene Spieler-/Händlerbilder | Herkunft und erlaubte Veröffentlichung jeder übernommenen Datei | Nicht übernommen |
 | Schriftgestaltung A | CSS bindet Space Grotesk über Google Fonts ein | Benötigte Dateien, Lizenzhinweise und ggf. lokale Einbindung für Desktop prüfen | Nicht übernommen |
 | Bibliotheken | In den jeweiligen Manifesten deklarierte Abhängigkeiten | Tatsächlich übernommene Versionen, Lockdateien und nötige Hinweise | Noch kein Codegrundstand |
-| Neue Planungsunterlagen und redaktionelle Projektdateien | In diesem Projekt für die Zusammenführung erstellt | CC BY-NC 4.0, Namensnennung OnekoSL; siehe [Lizenz](lizenz.md) | Zur Veröffentlichung vorgesehen |
+| Neue Planungsunterlagen und redaktionelle Projektdateien | In diesem Projekt für die Zusammenführung erstellt | CC BY-NC 4.0, Namensnennung OnekoSL; siehe [Lizenz](lizenz.md) | Öffentlich veröffentlicht |
 
 Für jede später übernommene fremde Datei erfassen: Zielpfad, Quelle, Urheberangabe, Lizenz/Freigabe, erforderlichen Hinweis und eigene Änderungen. Fehlende Nachweise werden nicht durch eine pauschale Projektlizenz ersetzt. Benötigte rechtliche Hinweise bleiben beim Übertragen von Code erhalten.
 

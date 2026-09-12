@@ -15,6 +15,7 @@ Der neue Projektort bedeutet keine vollständige Neuentwicklung. Bewährte Engin
 ```text
 Die Hanse/
   README.md
+  LICENSE                     CC BY-NC 4.0 für den Planungsstand
   docs/                       Planung, Regeln, API und Herkunft
   web_ui/
     backend/                  FastAPI, Engine, SQLite und Backend-Tests
@@ -26,7 +27,7 @@ Die Hanse/
   .gitattributes
 ```
 
-Die Struktur erhält wichtige Pfade des ersten Prototyps und reduziert unnötige Anpassungen an Buildskripten. Der aktuelle Ordner enthält erst `README.md`, `docs/` und die beiden Git-Konfigurationsdateien. Geplante Verzeichnisse werden angelegt, wenn sie Inhalt erhalten.
+Die Struktur erhält wichtige Pfade des ersten Prototyps und reduziert unnötige Anpassungen an Buildskripten. Der aktuelle Ordner enthält erst `README.md`, `LICENSE`, `docs/` und die beiden Git-Konfigurationsdateien sowie die lokale Git-Verwaltung. Geplante Verzeichnisse werden angelegt, wenn sie Inhalt erhalten.
 
 ## Zuständigkeiten
 

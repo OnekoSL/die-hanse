@@ -12,7 +12,7 @@ Größen sind relativ: **S** = begrenzt, **M** = mehrere zusammenhängende Ände
 
 | ID | Ergebnis | Abhängigkeit | Größe | Status |
 | --- | --- | --- | --- | --- |
-| M0 | Eigenständige Planung und geklärter erster Veröffentlichungsumfang | Keine | M | Erstveröffentlichung beauftragt und lizenziert; Architekturentscheidung weiter offen |
+| M0 | Eigenständige Planung und geklärter erster Veröffentlichungsumfang | Keine | M | Planung öffentlich veröffentlicht; technische Entwurfsentscheidungen weiter offen |
 | M1 | Technischer Grundstand läuft aus diesem Projekt | Architekturentscheidung und Herkunftsprüfung | M–L | Geplant |
 | M2 | Verlässlicher Handel und sichere Spielstandentwicklung | M1 | L | Geplant |
 | M3 | Verständlicher manueller Handelsablauf mit Karte und Monatsbericht | M2, Zeit-/Kalenderentscheidung | L | Geplant |
@@ -22,7 +22,7 @@ Größen sind relativ: **S** = begrenzt, **M** = mehrere zusammenhängende Ände
 | M7 | Breiter Zusammenschluss und Import der zweiten Variante | M6, Waren-/Stadtmapping und Importregeln | XL | Geplant |
 | M8 | Abgestimmter Spielverlauf und Desktop-Auslieferung | M7, laufende Balanceprüfungen | L | Geplant |
 
-Zuerst wird das **Planungsrepository** öffentlich veröffentlicht; diese Reihenfolge ist festgelegt. Eine **spielbare öffentliche Vorabfassung** ist ein anderes Ergebnis und wird frühestens nach M4 vorgeschlagen. Ihr genauer Umfang wird noch entschieden. Offene technische Entwurfsentscheidungen in M0 sind in der öffentlichen Planung kenntlich gemacht.
+Das **Planungsrepository** ist öffentlich veröffentlicht; danach folgt die spielbare Zusammenführung. Eine **spielbare öffentliche Vorabfassung** ist ein anderes Ergebnis und wird frühestens nach M4 vorgeschlagen. Ihr genauer Umfang wird noch entschieden. Offene technische Entwurfsentscheidungen in M0 sind in der öffentlichen Planung kenntlich gemacht.
 
 ## M0 – Planung und Veröffentlichung vorbereiten
 

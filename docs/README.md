@@ -20,7 +20,7 @@ Stand: 12. September 2026.
 - **Vorgeschlagen:** Python/React/Tauri als gemeinsame Basis, Tagesreisen mit Monatsabrechnung, eine zuständige Spielengine.
 - **Lizenz des Planungsstands:** CC BY-NC 4.0, siehe [Geltungsbereich](lizenz.md).
 - **Offen:** Konkrete Lizenz für späteren Spielcode, einzelne Spielregeln und genauer Umfang der ersten spielbaren Vorabfassung.
-- **Umgesetzt in diesem Ordner:** Dokumentation, Lizenztext, `.gitignore` und `.gitattributes`.
+- **Umgesetzt:** Dokumentation, Lizenztext, `.gitignore`, `.gitattributes`, eigenständiges Git-Repository und öffentliche Planungsveröffentlichung unter [OnekoSL/die-hanse](https://github.com/OnekoSL/die-hanse).
 - **Noch nicht umgesetzt:** Codeübernahme und spielbare Integration. Der Veröffentlichungsstand wird im [GitHub-Dokument](github-veroeffentlichung.md) geführt.
 
 Ein Vorschlag wird erst nach einer ausdrücklichen Entscheidung als festgelegt eingetragen. Beim Beginn eines Arbeitspakets werden die relevanten Entscheidungen geprüft; Routineumsetzung folgt dem dann geltenden Stand. Abgeschlossene Meilensteine benötigen die in der Roadmap beschriebenen Nachweise.

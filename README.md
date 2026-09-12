@@ -4,6 +4,8 @@ Eine historische Wirtschafts- und Handelssimulation: Vom Lübecker Kaufmann zum 
 
 **Status: Planung, Stand 12. September 2026.** In diesem Projekt entsteht die Zusammenführung zweier vorhandener Hanse-Prototypen. Der Ordner enthält derzeit Planungsunterlagen und Regeln für die spätere Git-Versionierung, noch keine spielbare Anwendung.
 
+Öffentliches Repository: [OnekoSL/die-hanse](https://github.com/OnekoSL/die-hanse).
+
 ## Geplantes Spielerlebnis
 
 Waren kaufen, Märkte einschätzen, Schiffe auf Reisen schicken und Gewinne in das eigene Handelshaus investieren. Bewährte Routen können später an bezahlte Verwalter übergeben werden. Jahreszeiten, Lageralter und Reisegefahren sollen die wirtschaftlichen Entscheidungen erweitern.
@@ -23,7 +25,7 @@ Der geplante Zusammenschluss verbindet freie Handelsrouten und lokale Märkte de
 
 ## Nächster Meilenstein
 
-Zunächst werden diese Planungsunterlagen öffentlich bereitgestellt. Anschließend entsteht die spielbare Zusammenführung; als nächster technischer Schritt ist ein eigenständig startbarer Grundstand aus dem bestehenden Python-/React-Prototyp vorgesehen. Architektur und einzelne Spielregeln bleiben bis zu ihrer Festlegung als Vorschläge gekennzeichnet.
+Die Planungsunterlagen sind öffentlich bereitgestellt. Als Nächstes entsteht die spielbare Zusammenführung; als erster technischer Schritt ist ein eigenständig startbarer Grundstand aus dem bestehenden Python-/React-Prototyp vorgesehen. Architektur und einzelne Spielregeln bleiben bis zu ihrer Festlegung als Vorschläge gekennzeichnet.
 
 ## Lizenz
 

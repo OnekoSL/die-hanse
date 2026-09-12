@@ -1,8 +1,8 @@
 # Öffentliche GitHub-Veröffentlichung
 
-Stand: 12. September 2026. Die Veröffentlichung der Planung ist beauftragt. Der Erststand wird unter `OnekoSL/die-hanse` vorbereitet; die folgenden Angaben beschreiben seinen Inhalt und den weiteren Ablauf.
+Stand: 12. September 2026. Die Planung ist unter [OnekoSL/die-hanse](https://github.com/OnekoSL/die-hanse) öffentlich veröffentlicht. Repository-Sichtbarkeit, Hauptbranch und hochgeladener Erststand wurden nach dem Upload überprüft. Die folgenden Angaben beschreiben den Inhalt und die Vorbereitung weiterer Ausbaustufen.
 
-## Vorgeschlagener erster Auftritt
+## Öffentliches Projekt
 
 | Feld | Stand |
 | --- | --- |

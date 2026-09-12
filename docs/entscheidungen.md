@@ -38,5 +38,6 @@ Die Planungsunterlagen erlauben mit CC BY-NC 4.0 nichtkommerzielle Bearbeitung u
 | 12.09.2026 | Zunächst Planung erstellen; Veröffentlichung als öffentliches GitHub-Projekt vorbereiten | Vorgabe des Projektinhabers; noch kein Veröffentlichungsauftrag |
 | 12.09.2026 | Planung zuerst öffentlich machen, danach spielbare Zusammenführung entwickeln; Projektname „Die Hanse“, Nutzung nur nichtkommerziell | Anschließende ausdrückliche Vorgabe des Projektinhabers |
 | 12.09.2026 | Repository-Schreibweise `die-hanse` und verbundenes Konto `OnekoSL`; CC BY-NC 4.0 für den aktuellen Planungsstand | Konkrete Umsetzung dieser Vorgabe; spätere Softwarelizenz bleibt gesondert |
+| 12.09.2026 | Planung unter [OnekoSL/die-hanse](https://github.com/OnekoSL/die-hanse) öffentlich veröffentlicht | Upload, Sichtbarkeit `PUBLIC` und Übereinstimmung des lokalen mit dem entfernten Erststand geprüft |
 
 Weitere Beschlüsse ergänzen Datum, gewählte Alternative, Grund und betroffene Dokumente. Nach einer Regelentscheidung werden Spielkonzept, Roadmap und später die technische Regel-/API-Referenz entsprechend angepasst.
