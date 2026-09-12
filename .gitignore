@@ -1,0 +1,76 @@
+# Lokale Konfiguration und Zugangsdaten
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Betriebssystem und Editoren
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.user
+*.suo
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+.venv-*/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Node / TypeScript
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# Rust, .NET und Paketierung
+target/
+bin/
+obj/
+build/
+artifacts/
+backend-dist/
+dotnet-sdk/
+dotnet-install.*
+*.msi
+*.wixpdb
+
+# Persönliche Spielstände und SQLite-Nebendateien
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+*.sav.json
+*.sav.json.bak
+saves/
+Saves/
+
+# Lokale Übernahmen, Arbeitsdaten und Ausgaben
+/local/
+*.bak
+*.log
+*.tmp
+.dev-pids
+tmp/
