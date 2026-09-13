@@ -1,0 +1,395 @@
+{
+  "recorded_on": "2026-09-13",
+  "A": {
+    "head": "b877c384d9b4221e75ec73ddf6e48842a36eb48f",
+    "role": "Source baseline; target files subsequently modified",
+    "files": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha256": "2fa69f58e72ca20caece8fb23f8ca34b5e02e2f0cb828e180011493fb747e4aa"
+      },
+      {
+        "path": "lokal_exe/.gitignore",
+        "sha256": "d510aa807f3a64043f80ce96f410ce7174dfb56dc1466303cdb4b21abba63662"
+      },
+      {
+        "path": "lokal_exe/PILOT_CHECKLIST.md",
+        "sha256": "44c9cd4ca721f914b779d74c2d251b858332cd0c813f06c32ac5e17ebddcac33"
+      },
+      {
+        "path": "lokal_exe/README.md",
+        "sha256": "6bdddad2e75aade0f16085f92f44fc822c9285449d42ab14dc07a49460a5a0df"
+      },
+      {
+        "path": "lokal_exe/package-lock.json",
+        "sha256": "c59cf6b338e224243cffb7dcd66a3397730789057acf4d627fc9e115f483b3a2"
+      },
+      {
+        "path": "lokal_exe/package.json",
+        "sha256": "78b2ffaddb70067f3f134334c1d147de14d7e65e6263d56408ecdf5704732a34"
+      },
+      {
+        "path": "lokal_exe/scripts/build-backend.ps1",
+        "sha256": "18b878c0141c299818320e82e6464bfc33e03e7ce5f178c7985e5495a531e684"
+      },
+      {
+        "path": "lokal_exe/scripts/build-msi.ps1",
+        "sha256": "c85aeb28bc5a86ec7e79a2a8d9dcbd004f50c0b9e0de7793fac45569c36ff760"
+      },
+      {
+        "path": "lokal_exe/src-tauri/Cargo.lock",
+        "sha256": "7e151eda4aef8c8c00649001cd666c27a327f18e966304f4c0b7f987ae90abc1"
+      },
+      {
+        "path": "lokal_exe/src-tauri/Cargo.toml",
+        "sha256": "7e322b60deff066227f79c8a677c8208854821ad59a15b24798e3a9c4438a98e"
+      },
+      {
+        "path": "lokal_exe/src-tauri/build.rs",
+        "sha256": "26d688a2f9a7bc5436ef541c6afe17e1098f01610c5f5a7b7c24b723b45d90b8"
+      },
+      {
+        "path": "lokal_exe/src-tauri/src/main.rs",
+        "sha256": "3626444d303ec203662620f28d7b4aea589db984d829eff79bd864bf92ab0b1e"
+      },
+      {
+        "path": "lokal_exe/src-tauri/tauri.conf.json",
+        "sha256": "8d329895864d18bded6bd798fedc1dedf0d81bbe5e96989820edabf3fddd11a3"
+      },
+      {
+        "path": "web_ui/.gitignore",
+        "sha256": "21d43afa264127a2b568a5c933b5a8aebe6fab87b0eeb0a6402f2de97b5c82ab"
+      },
+      {
+        "path": "web_ui/README.md",
+        "sha256": "f3abe703a1b97eef238689b774bc8ca5ce3629f5369715f06dd26e745469c3ed"
+      },
+      {
+        "path": "web_ui/backend/app/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "web_ui/backend/app/api/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "web_ui/backend/app/api/routes.py",
+        "sha256": "1785e5226cfd514a6179698551f66b72b3d57449f6aed68fa81625d27cf94bfd"
+      },
+      {
+        "path": "web_ui/backend/app/desktop_entry.py",
+        "sha256": "ce982b9d13daf1037d03a2bd12587e537271d51c9d5ad94d24c9fe93f9553faf"
+      },
+      {
+        "path": "web_ui/backend/app/domain/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "web_ui/backend/app/domain/schemas.py",
+        "sha256": "55aefc78aaebdb2cea888b4d421371dd920eacc3252d49d79a91dd96b298e261"
+      },
+      {
+        "path": "web_ui/backend/app/engine/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "web_ui/backend/app/engine/game_engine.py",
+        "sha256": "91e23aa2951cf35dd8a6b288439018abf6098141d2695ae78b1af01dda5494d7"
+      },
+      {
+        "path": "web_ui/backend/app/engine/game_world.py",
+        "sha256": "0aba88ccabd3ba63a71279a18396b19d9849884bcb58983ef268f9e72451e97f"
+      },
+      {
+        "path": "web_ui/backend/app/engine/pricing.py",
+        "sha256": "36065e1d7e337372d04b4760b79cfc91163e4ec69d741709340466ede8ea025a"
+      },
+      {
+        "path": "web_ui/backend/app/engine/simulation.py",
+        "sha256": "d9979e19aa8f50239c4f48731cf70578d4c34ec98a1635735f8548c1fba993ca"
+      },
+      {
+        "path": "web_ui/backend/app/engine/strategy.py",
+        "sha256": "a1a91104585e07c5e22e3d49c8c7babef83e26ef906705b59a50539f46d5070f"
+      },
+      {
+        "path": "web_ui/backend/app/infra/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "web_ui/backend/app/infra/db.py",
+        "sha256": "52d5e578ae40c9f7eadcf28bc0d8b23790b0859b1414f304272581495e2e2589"
+      },
+      {
+        "path": "web_ui/backend/app/infra/models.py",
+        "sha256": "eb443ee36ab02216f3897800ff200080269e616ecf6b5231b531b3e24f00b589"
+      },
+      {
+        "path": "web_ui/backend/app/infra/repositories.py",
+        "sha256": "418f1e400ec9138d3b6e9babaeebe7b608a34e0ac6cfa45bc1505c537f8be02c"
+      },
+      {
+        "path": "web_ui/backend/app/infra/seeds.py",
+        "sha256": "f3275a7745f6c362cce54f3fa35a1e885a9a1da3d8dd6f860b2f7e521683569f"
+      },
+      {
+        "path": "web_ui/backend/app/main.py",
+        "sha256": "3fa779ed5b0dacb9701e48823c61befc1587b4f0c54c577359271df47ee48b23"
+      },
+      {
+        "path": "web_ui/backend/pyproject.toml",
+        "sha256": "f97e26b009aee33b1cd8a0961aa71d3de52eca2d4fcde7051b2dcb0a12739940"
+      },
+      {
+        "path": "web_ui/backend/requirements-dev.txt",
+        "sha256": "ed9e9e18468b158a55e3a5fc88d13a36b582b4aa3acce3f9329ecdc82b3f7b60"
+      },
+      {
+        "path": "web_ui/backend/requirements.txt",
+        "sha256": "e0a5f374ff60d17d1720e119707937c7b0a6984e1904867b825b66227861e05e"
+      },
+      {
+        "path": "web_ui/backend/tests/conftest.py",
+        "sha256": "7a2e82cf3a0bafd5f6dc9f78ade4219d15437455d09f9b5d1f2956746d3cda12"
+      },
+      {
+        "path": "web_ui/backend/tests/test_api.py",
+        "sha256": "469ae5faa3cf7505490a7d2845bbc06849761905aa93b33f9de61dbb5cbcee42"
+      },
+      {
+        "path": "web_ui/backend/tests/test_game_api.py",
+        "sha256": "db38e799ab5e53710b8d7afac5e90c5a27dbd304bbe4d72c48579f860253ff46"
+      },
+      {
+        "path": "web_ui/backend/tests/test_game_engine.py",
+        "sha256": "3a5136712bff5ed80f7e3de0c473b313c7919d80cfccf9331f359cbfa6fc9e72"
+      },
+      {
+        "path": "web_ui/backend/tests/test_pricing.py",
+        "sha256": "e175a16c4be585571228413bc16b8250d6ba9e68752b04a099ae02774248339b"
+      },
+      {
+        "path": "web_ui/backend/tests/test_simulation.py",
+        "sha256": "6b1f3e943475a42e37b69ccc8392635393dc2c5dbd6b3474962a63ecaf4afa0b"
+      },
+      {
+        "path": "web_ui/data/scenarios/hanse_seed_v1.json",
+        "sha256": "8ff00cf280c7196d523ede0a3bbdf3e69efc550e61cde13949a8bb051c7b14d0"
+      },
+      {
+        "path": "web_ui/docs/README.md",
+        "sha256": "31c95779fc5f9186522a48a3407190ef97be5782280a86463c5b0dc1d8fc6533"
+      },
+      {
+        "path": "web_ui/docs/api.md",
+        "sha256": "fd650bc5341493513056d6eb31a691d048afab95790ee623f97a6f0dfa179396"
+      },
+      {
+        "path": "web_ui/docs/rules.md",
+        "sha256": "6ec32c154b3ec2d411575c45bcab12d6c7406db990761e91cf21b6f7fb7676b4"
+      },
+      {
+        "path": "web_ui/docs/scenario-format.md",
+        "sha256": "57f02307606c74a7f8cef9444c9d5b173022d7c36ab1326143047f6fee192904"
+      },
+      {
+        "path": "web_ui/frontend/.env.desktop",
+        "sha256": "009a67c3133ca7e0f5d53bd867de5f8cc09100f8088c5aa9fefc904c2ed97ef3"
+      },
+      {
+        "path": "web_ui/frontend/index.html",
+        "sha256": "b6ebe1cfbd3d0009e947af179e2f0d0cea8c283c996f1f293325c397618ad0f2"
+      },
+      {
+        "path": "web_ui/frontend/package-lock.json",
+        "sha256": "943edc8f52279037ad96dc909e2971d9210a99b95a5ae37971d468b7c10c871f"
+      },
+      {
+        "path": "web_ui/frontend/package.json",
+        "sha256": "04dd34aa8f67806d7db03ae6bb60268f33b9af8a36e885d2670f6aa716e957ea"
+      },
+      {
+        "path": "web_ui/frontend/src/App.tsx",
+        "sha256": "df93489ecc3937fc82634250452313e115e7ad150980a4c70dcfd8ba8986ee6b"
+      },
+      {
+        "path": "web_ui/frontend/src/api-client/client.ts",
+        "sha256": "f47bffe027b7ca0e25390516dd93a842da9ef6463fa57f4faa1d1416a16c8f01"
+      },
+      {
+        "path": "web_ui/frontend/src/api-client/types.ts",
+        "sha256": "1aded857066c90403647b238f9f263973cf3e9dd62993914bd81c91803d8bd18"
+      },
+      {
+        "path": "web_ui/frontend/src/components/EquityChart.tsx",
+        "sha256": "60c995f75072fa84443f7cac98776b44770c37c8cd5fc09452386bb85b0e31dc"
+      },
+      {
+        "path": "web_ui/frontend/src/components/EventTable.tsx",
+        "sha256": "1824386654d39d928e92235d3cc9a175276adc9edf32586a9bc120408d5419bf"
+      },
+      {
+        "path": "web_ui/frontend/src/components/MetricsPanel.tsx",
+        "sha256": "3e7f48db961f0281c594cf0b2b6d075f464a5e42b1274152b0490e081cbb8592"
+      },
+      {
+        "path": "web_ui/frontend/src/components/ScenarioPicker.tsx",
+        "sha256": "7941f1ec1beb4b6697c8316a54f2b939435939252ca4a85e8929b20ffca61583"
+      },
+      {
+        "path": "web_ui/frontend/src/components/StrategyForm.tsx",
+        "sha256": "52b3ae30f1e356697b8de305aff2fa2f860c862f100825abc30dbf15c1911d98"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/GameScreen.tsx",
+        "sha256": "f24d3e8e51b36d2fb5de599fabc09e2c8c0723d27c6183298460892cc1ecfc96"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/components/CityView.tsx",
+        "sha256": "ed0d5d082cea72f49422498e6a2c9645c96d05fdf8c298a09c81c13bb95faf70"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/components/FleetView.tsx",
+        "sha256": "e92ffccad3126dad3e627bd1f8a216eb6e897575aa63fa0909b0c6f105eaa787"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/components/LogbookView.tsx",
+        "sha256": "46d6c7d6b368ba36f1903cd22ab091a9ee5bd2f215228adcd2e49d378d7e8b13"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/components/StorageView.tsx",
+        "sha256": "26cb1146e1cd004390b49c3a76bcd20345c6919ed7a43cbfb92edab0a346def0"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/model.ts",
+        "sha256": "3cb195649135f9e554fc5461d3013d6ca53a6944bd0770239055acf99c1eafe3"
+      },
+      {
+        "path": "web_ui/frontend/src/features/game/useGameController.ts",
+        "sha256": "0ff3b250d52440a15497cd6c47636ec238668d2558f33f212445f0bb11af4af6"
+      },
+      {
+        "path": "web_ui/frontend/src/main.tsx",
+        "sha256": "fa72787d96c97dda32a96343f61b313773d0884d3b1ac80fc3fb9910512dbb66"
+      },
+      {
+        "path": "web_ui/frontend/src/pages/DashboardPage.tsx",
+        "sha256": "98be7c148df1dec28a5a093597b0bb9946d0e5fa3c9a8921d389671d67030d03"
+      },
+      {
+        "path": "web_ui/frontend/src/pages/GamePage.tsx",
+        "sha256": "269543dc30c77a7e4cbe90dcdf53d42032a2636a02292dcb17d3b227dba346d9"
+      },
+      {
+        "path": "web_ui/frontend/src/pages/RunDetailPage.tsx",
+        "sha256": "c826a7700b28b03a5f19910ad77403cca3c7f693165a91ab9034106794c4933b"
+      },
+      {
+        "path": "web_ui/frontend/src/styles.css",
+        "sha256": "4d3785a185486112eed6c484d6276e41a543d95c904e70df164c482d15658bdd"
+      },
+      {
+        "path": "web_ui/frontend/src/test-setup.ts",
+        "sha256": "35413f4b8ab202e110427b46808d3900456c0d38be702eb9460c70cfcaf2523a"
+      },
+      {
+        "path": "web_ui/frontend/src/vite-env.d.ts",
+        "sha256": "424faf9241dd699dda995b367ed36665732da1e6ec1f33b2fd40394488ecac92"
+      },
+      {
+        "path": "web_ui/frontend/tests/e2e/app.e2e.test.tsx",
+        "sha256": "3d37fcdff5ee52dd975512cc3942efa6f6fe5e587873319a77efeff526d2d78e"
+      },
+      {
+        "path": "web_ui/frontend/tests/e2e/game.e2e.test.tsx",
+        "sha256": "f37f6f575a2f8350048b34cb62ba4243f4246d2a258904aae51f762c6ab11717"
+      },
+      {
+        "path": "web_ui/frontend/tests/unit/game-model.test.ts",
+        "sha256": "cbf0745c9f7532b292ad9983084c6804e5b87c18b9185575e4667a46a006ea45"
+      },
+      {
+        "path": "web_ui/frontend/tsconfig.json",
+        "sha256": "2d5826b493b01d9b67c037aee027f3ed9fc29832cc31a8a3630bfdbbe3d50f60"
+      },
+      {
+        "path": "web_ui/frontend/vite.config.ts",
+        "sha256": "398acb97fae63a4a12874349743ec1452da96a459139641ce96206c2bc1b6e07"
+      }
+    ]
+  },
+  "B": {
+    "head": null,
+    "role": "Design and data reference only; no C# runtime copied",
+    "files": [
+      {
+        "path": "Hanse.Engine/FirmenBewertung.cs",
+        "sha256": "0507d3661062d1898a670821fd6f347f4a3f2878bc3999e23c64ba6db802d74c"
+      },
+      {
+        "path": "Hanse.Engine/GameEngine.cs",
+        "sha256": "ab39cf7bebc66b016f0baecebfcc304fea528057cfb8cad87597e6b3b8d4ff2b"
+      },
+      {
+        "path": "Hanse.Engine/Handelsbuch.cs",
+        "sha256": "9033b9f824b37a20d1b3e44759793edbde684c301091e9dde7fb72a90866bacc"
+      },
+      {
+        "path": "Hanse.Engine/HandelsEinschaetzung.cs",
+        "sha256": "09064f7341ea9b9c884ee78a93ee47b3e8f83409bb5d02fdc0726029e68f0c37"
+      },
+      {
+        "path": "Hanse.Engine/Hanse.Engine.csproj",
+        "sha256": "ae187eb3dabed4f10295274fd79028db2c0e5e6ca03bd737aa80cd73a630933e"
+      },
+      {
+        "path": "Hanse.Engine/Kalender.cs",
+        "sha256": "10bd14b7e1c1bb8bd2e6f4dd0c5e945dc547955518517170098db5e554af430b"
+      },
+      {
+        "path": "Hanse.Engine/Lagerhaltung.cs",
+        "sha256": "8bb640d0b1602dda140060c7ed8b56fa4d0e18eae8ff9071c1d06024d8068bfb"
+      },
+      {
+        "path": "Hanse.Engine/Models.cs",
+        "sha256": "f0196f7cab04e383fead62504dbf1c8e22782feb73e2db0a8713c942e05691fb"
+      },
+      {
+        "path": "Hanse.Engine/Stammdaten.cs",
+        "sha256": "5833f02c089a6c39d192db7d3bcced4131d042e90442a2adc7d84833fa0f7cb6"
+      },
+      {
+        "path": "Hanse.Engine/Wirtschaft.cs",
+        "sha256": "5e1159df566f1f2550c8a6af7a7ca6d8222f1ab44b8c563f8eb0f72cf3600b1c"
+      },
+      {
+        "path": "data/ausbau.json",
+        "sha256": "d88df4cdc88efa2ec452b22edb2ab57265b3302735a74bc5a185fd18a42e21f2"
+      },
+      {
+        "path": "data/ausruestung.json",
+        "sha256": "8201b04b08217476f8e3dd69f0410962d01e9a99ffa4f1e607535097bae04461"
+      },
+      {
+        "path": "data/kalender.json",
+        "sha256": "b17e496625c8c56d00727fa8d5910f528a2579f068b307d7acf1420c79c82e42"
+      },
+      {
+        "path": "data/konstanten.json",
+        "sha256": "6f8717ae89bb48d0216dd5621b389902e64cd3d80dfc22c56fc1f2e9a4d615be"
+      },
+      {
+        "path": "data/spielstart.json",
+        "sha256": "9d2651b2bf7d3fac9b635e9bd6a3ec0131895c1d2712f063d5db659b18f8b9f6"
+      },
+      {
+        "path": "data/staedte.json",
+        "sha256": "7902f5b6460b1f427a8bff298c0e8d8e113f2ef94c50ae9d51c88971b927b520"
+      },
+      {
+        "path": "data/waren.json",
+        "sha256": "5f9e5c51c728e00ae82a848e4787c1ace9f95a278f3a7e875be128bf1c82bedb"
+      }
+    ]
+  }
+}

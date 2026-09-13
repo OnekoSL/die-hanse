@@ -1,36 +1,28 @@
 # Die Hanse
 
-Eine historische Wirtschafts- und Handelssimulation: Vom Lübecker Kaufmann zum Handelshaus mit Flotte, Kontoren und Verwaltern.
+Historische Handelssimulation für Windows: vom Lübecker Kaufmann zum eigenen Handelshaus.
 
-**Status: Planung, Stand 12. September 2026.** In diesem Projekt entsteht die Zusammenführung zweier vorhandener Hanse-Prototypen. Der Ordner enthält derzeit Planungsunterlagen und Regeln für die spätere Git-Versionierung, noch keine spielbare Anwendung.
+**0.1.0-alpha.1 – in Abnahme.** Die Basis verbindet zwei Prototypen: elf Häfen, neun Grundwaren, freie Handelsfahrten, Kontore, Schiffsbau, Monatsberichte und benannte Spielstände.
 
-Öffentliches Repository: [OnekoSL/die-hanse](https://github.com/OnekoSL/die-hanse).
+## Spielen
 
-## Geplantes Spielerlebnis
+Vorabversionen: [GitHub Releases](https://github.com/OnekoSL/die-hanse/releases). Den Windows-x64-MSI installieren und **Die Hanse** starten. Python und Node.js sind zum Spielen nicht erforderlich. Windows benötigt die Microsoft WebView2 Runtime; der Installer berücksichtigt diese Voraussetzung. Nach Installation ist das Spiel offline nutzbar.
 
-Waren kaufen, Märkte einschätzen, Schiffe auf Reisen schicken und Gewinne in das eigene Handelshaus investieren. Bewährte Routen können später an bezahlte Verwalter übergeben werden. Jahreszeiten, Lageralter und Reisegefahren sollen die wirtschaftlichen Entscheidungen erweitern.
+Start am 1. März 1400 mit 1.000 Mark, einer Standardkogge und einem Lübecker Kontor. Zum Einstieg zehn Last Salz kaufen, nach London reisen und dort verkaufen. Die Handelsvorschau zeigt vor der Bestätigung die Gesamtsumme.
 
-Der geplante Zusammenschluss verbindet freie Handelsrouten und lokale Märkte des ersten Prototyps mit dem Unternehmensaufbau des zweiten. Technische Basis und genaue Spielregeln sind als Vorschläge dokumentiert, nicht als bereits umgesetzte Funktionen.
+Jede erfolgreiche Aktion wird automatisch gespeichert. Unter „Spielstände“ zusätzliche benannte Stände anlegen und ausdrücklich überschreiben. Eigene Daten: `%AppData%/com.onekosl.diehanse/data/hanse.db`. Die Vorgänger-Spielstände bleiben unberührt; Import folgt später.
 
-## Planung lesen
+## Entwicklung
 
-- [Planungsübersicht](docs/README.md)
-- [Spielkonzept und erster gemeinsamer Spielumfang](docs/spielkonzept.md)
-- [Technik und Übernahme der bestehenden Projekte](docs/architektur.md)
-- [Roadmap mit Abnahmekriterien](docs/roadmap.md)
-- [Festlegungen und offene Entscheidungen](docs/entscheidungen.md)
-- [Vorbereitung der öffentlichen GitHub-Veröffentlichung](docs/github-veroeffentlichung.md)
-- [Ausgangsprojekte und Herkunftsnachweise](docs/herkunft.md)
-- [Lizenz und nichtkommerzielle Nutzung](docs/lizenz.md)
+Python 3.11, Node.js 22; für Windows-Builds zusätzlich Rust und Visual Studio mit C++/Windows SDK. Abhängigkeiten sind über Constraints und Lockdateien festgelegt.
 
-## Nächster Meilenstein
-
-Die Planungsunterlagen sind öffentlich bereitgestellt. Als Nächstes entsteht die spielbare Zusammenführung; als erster technischer Schritt ist ein eigenständig startbarer Grundstand aus dem bestehenden Python-/React-Prototyp vorgesehen. Architektur und einzelne Spielregeln bleiben bis zu ihrer Festlegung als Vorschläge gekennzeichnet.
+- [Dokumentation](docs/README.md), [Spielregeln](docs/spielkonzept.md), [Architektur](docs/architektur.md)
+- [Roadmap](docs/roadmap.md), [Beschlüsse](docs/entscheidungen.md), [Abnahme](docs/abnahme.md)
+- [Webentwicklung](web_ui/README.md), [Windows bauen](lokal_exe/README.md), [API](web_ui/docs/api.md)
+- [Herkunft](docs/herkunft.md), [Lizenz](docs/lizenz.md)
 
 ## Lizenz
 
-Die Planungsunterlagen von **OnekoSL** stehen unter **Creative Commons Namensnennung – Nicht kommerziell 4.0 International (CC BY-NC 4.0)**. Nichtkommerzielle Nutzung, Bearbeitung und Weitergabe sind unter den Lizenzbedingungen erlaubt; Namensnennung, Lizenzverweis und Kennzeichnung von Änderungen sind erforderlich. Kommerzielle Nutzung wird durch diese Lizenz nicht erlaubt.
+Eigener Spielcode: **PolyForm Noncommercial 1.0.0**. Nichtkommerzielle Nutzung, Bearbeitung und Weitergabe gemäß dieser Lizenz. Dokumentation: **CC BY-NC 4.0**. Namensnennung: **OnekoSL**. Geltungsbereiche: [LICENSE](LICENSE), [LICENSE-CODE](LICENSE-CODE), [LICENSE-DOCS](LICENSE-DOCS).
 
-[Lizenztext](LICENSE) · [Geltungsbereich und Hinweise](docs/lizenz.md) · [Offizielle Zusammenfassung](https://creativecommons.org/licenses/by-nc/4.0/)
-
-Für den späteren Spielcode gilt ebenfalls das Ziel nichtkommerzieller Nutzung. Seine konkrete Softwarelizenz wird vor der Codeveröffentlichung festgelegt; dieser Stand enthält noch keinen Spielcode oder übernommene Spielgrafiken.
+Fremdbibliotheken behalten ihre eigenen Lizenzen und Rechte. [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) enthält Hinweise und Quellen.

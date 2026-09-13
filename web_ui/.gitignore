@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+backend/.venv/
+backend/hanse.db
+frontend/node_modules/
+frontend/dist/

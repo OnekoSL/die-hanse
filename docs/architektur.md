@@ -1,78 +1,27 @@
-# Architektur und Codeübernahme
+# Architektur
 
-Stand: 12. September 2026. **Architekturvorschlag; noch keine Codeübernahme.**
-
-## Technische Basis
-
-Empfohlen ist die Weiterverwendung von Python/FastAPI, React/TypeScript, SQLite und der vorhandenen Tauri-Desktop-Hülle. Der neue Ordner erhält dafür eine eigenständige, gezielte Übernahme des bestehenden Quellcodes. Er darf zur Laufzeit nicht von Dateien außerhalb dieses Projekts abhängen.
-
-Aus der C#-Variante werden zunächst Datenmodelle, Regeln, Bedienideen und Testfälle fachlich übertragen. WinForms-Steuerelemente lassen sich nicht unmittelbar als React-Komponenten verwenden. Eine dauerhaft zweite Engine würde Geld, Zeit und Marktzustand doppelt verwalten und wird deshalb nicht empfohlen.
-
-Der neue Projektort bedeutet keine vollständige Neuentwicklung. Bewährte Engine-Funktionen, API-Verträge, Repositories und Komponenten werden weitergeführt und in nachvollziehbaren Schritten angepasst.
-
-## Vorgeschlagene Struktur nach der Codeübernahme
-
-```text
-Die Hanse/
-  README.md
-  LICENSE                     CC BY-NC 4.0 für den Planungsstand
-  docs/                       Planung, Regeln, API und Herkunft
-  web_ui/
-    backend/                  FastAPI, Engine, SQLite und Backend-Tests
-    frontend/                 React, API-Client und UI-Tests
-    data/scenarios/           Versionierte Backtest-Szenarien
-  lokal_exe/                  Tauri und Desktop-Buildskripte
-  .github/workflows/          Prüfungen nach der Codeübernahme
-  .gitignore
-  .gitattributes
-```
-
-Die Struktur erhält wichtige Pfade des ersten Prototyps und reduziert unnötige Anpassungen an Buildskripten. Der aktuelle Ordner enthält erst `README.md`, `LICENSE`, `docs/` und die beiden Git-Konfigurationsdateien sowie die lokale Git-Verwaltung. Geplante Verzeichnisse werden angelegt, wenn sie Inhalt erhalten.
+Beschlossen und umgesetzt: Python/FastAPI, React/TypeScript, SQLite und Tauri. Die Übernahme verwendet A-Engine, Preisbildung, Kapazitäts-/Reiseprüfungen, API-Struktur, SQLAlchemy, Backtest und React-Aufteilung. B liefert zusätzliche Weltdaten und fachliche Vorbilder; es läuft keine zweite Engine.
 
 ## Zuständigkeiten
 
-| Bereich | Aufgabe |
-| --- | --- |
-| React | Bedienung, Auswahlzustand und Anzeige; keine verbindliche Wirtschaftsberechnung |
-| API | Eingaben und Antworten, Aufruf der Regeln, Transaktionsgrenzen |
-| Engine | Handel, Kapazitäten, Reisen, Zeit, Aufträge, Personal und Ereignisse |
-| Repositories/SQLite | Spielstände, Buchungen, Marktinformationen und sichere Migrationen |
-| Daten | Versionierte Weltdefinition, Waren, Routen, Ausbau- und Saisonwerte |
-| Tauri | Lokale Desktop-Verpackung derselben Anwendung |
+React stellt dar und steuert Auswahl/Aktionen. Wirtschaftsregeln, Kalender und Buchungen liegen im Backend. API, Pydantic-Schemas, TypeScript-Verträge und Client werden gemeinsam gepflegt. `GameScreen`, `useGameController`, reine Hilfsfunktionen und Bereichskomponenten bleiben getrennt.
 
-Neue Bereiche wie Kalender, Personal und Aufträge erhalten überschaubare Module. Bestehende Dateien werden nur geteilt, wenn der jeweilige Umbau es erfordert. Änderungen an der API betreffen gemeinsam Schemas, Routen, TypeScript-Typen, Client, Tests und API-Dokumentation.
+Der Backtest besitzt weiterhin eigene Preisformel, Strategie und Szenarien. Er bleibt unter `/backtest` ein Entwicklungswerkzeug. Der Haupteinstieg öffnet das Spielmenü.
 
-## Reihenfolge der Übernahme
+## Speicherung
 
-1. Einen Quellstand beider Prototypen dokumentieren, einschließlich nicht eingecheckter Abweichungen und nötiger Herkunftsnachweise.
-2. Benötigten A-Quellcode, Manifeste, Lockdateien, Tests und Start-/Buildskripte auswählen. Keine pauschale Ordnerkopie mit Datenbanken, Buildausgaben oder alter Git-Historie.
-3. Relative Pfade und Umgebungsvariablen prüfen; einen frischen Start mit eigener Datenbank ermöglichen.
-4. Bestehende Backend-/Frontend-Prüfungen als Ausgangsmessung ausführen; Abweichungen vor neuen Spielregeln dokumentieren.
-5. Die einzelnen B-Mechaniken nach Roadmap ergänzen und die dazu passenden Tests übertragen.
+SQLite hält vollständige Snapshots in `game_snapshots`: ein automatischer Stand `active` sowie beliebig viele manuelle/archivierte Stände. Gespeichert werden Sitzung, Märkte, Kontore, Flotte, Reisen, Bauaufträge, Kalender, Monatsbuchungen/-berichte, Marktinformationen und Handelsbuch.
 
-Die bisherigen Projekte bleiben währenddessen als Referenz erhalten. Es werden keine Verknüpfungen, Submodule oder Importpfade angelegt, die eine zweite lokale Projektkopie zum Spielen voraussetzen.
+Formatversion 1, Weltversion `alpha-world-1`, Regelversion 1 und SHA-256-Prüfsumme sind voneinander getrennt. Struktur, Versionen, Preise, Waren, Kapazitäten und Reisen werden vor Verwendung geprüft. Unbekannte/beschädigte Stände werden unverändert erhalten. Ein gültiger Speicherplatz kann einen defekten automatischen Stand ablösen; dessen Originalbytes werden zuvor archiviert.
 
-## Daten und Spielstände
+Jede Spieloperation verwendet `BEGIN IMMEDIATE` in einer SQLite-Transaktion. Lesen–Prüfen–Ändern–Speichern bleibt auch zwischen Prozessen serialisiert. Fehler rollen vollständig zurück. Erfolgreiche Befehle und Laden erzeugen eine neue Zustandsrevision; veraltete Handelsvorschauen liefern HTTP 409.
 
-Speicherformat, Spielregeln und Welt-/Balancingdaten benötigen unterscheidbare Versionen. Die bisherige A-Initialisierung kann bei Altschemata Tabellen löschen; ein Weltversionswechsel kann außerdem Sitzungen archivieren sowie Märkte, Lager, Informationen und Ereignisse löschen. Diese Übergänge werden vor einer Erweiterung der Welt durch sichere Migrationen ersetzt.
+Altdatenbanken mit `game_sessions` werden vor der Initialisierung abgewiesen. Keine Tabellenlöschung, kein Weltreset. Altimporte und Migrationen sind spätere Arbeitspakete.
 
-| Quelle | Zu erhalten | Neu zu definieren |
-| --- | --- | --- |
-| A: SQLite | Geld, Bestände, Kapazitäten, Kontorstufen, Reisen, Ereignisse und Informationsalter | Kalenderzuordnung, neue Personal-/Altersfelder und Geldformat |
-| B: JSON bis Version 5 | Besitz, Personal, Regeln, Altersposten, Berichte und gespeicherter Zufallszustand | Lokale Märkte, Tagesreisen und Zuordnung der abweichenden Kennungen |
+## Desktop
 
-Importe erzeugen eine neue Sitzung auf Basis einer Kopie. Fehler ersetzen keinen aktiven Stand. Zwei importierte Handelshäuser bleiben getrennte Spielstände. Bestehende Überbestände werden nicht abgeschnitten. Der erste B-Import kann auf Zustände ohne laufende Fahrt begrenzt sein; eine spätere Übernahme laufender Altaufträge muss Rückware, bereits gezahlte Kosten und Zufallsauswertung ausdrücklich behandeln.
+Kennung `com.onekosl.diehanse`, API `127.0.0.1:18522`, Daten `%AppData%/com.onekosl.diehanse/data/hanse.db`. Tauri startet ein PyInstaller-Verzeichnisbundle mit eigener Python-Laufzeit.
 
-Für die Zuordnung gilt insbesondere: A-`Fisch` entspricht B-`rohfisch`; B-`fisch` ist Stockfisch. A-`Luebeck` bleibt als bestehende technische Kennung erhalten. Anzeigenamen und Importkennungen werden getrennt behandelt. Die endgültige Tabelle aller Kennungen entsteht vor dem Import.
+Ein Windows-Jobobjekt bindet die gestarteten Backendprozesse an die Anwendung. Healthcheckfehler und Beenden räumen eigene Prozesse auf. Keine PID-Dateien, kein Beenden fremder Prozesse oder Übernehmen eines laufenden Backends. Ein belegter Port führt zur Startfehlermeldung.
 
-## Backtest
-
-Der bestehende Backtest besitzt eigene Szenarien, eine eigene Preisformel und eine eigene Strategie. Er ist noch kein Nachweis für die Regeln des interaktiven Handelshauses. Die Auswertung bleibt nutzbar, während gemeinsame Preis-, Zeit- und Auftragsfunktionen schrittweise angeglichen werden. Alte Läufe bleiben mit ihrem Regelstand erkennbar.
-
-## Prüfstrategie
-
-Backend-Tests immer mit einer eigenen temporären Datenbank über `HANSE_DB_PATH` ausführen, bevor die Anwendung importiert wird. Keine produktiven Spielstände für Tests verwenden. Zunächst gezielte Regressionen, danach die betroffenen bestehenden Prüfungen ausführen.
-
-Zum übernommenen Grundstand gehören Ruff, pytest, Frontend-Tests und TypeScript-/Vite-Build. UI-Integration zusätzlich im echten Browser prüfen; die vorhandenen Vitest-/jsdom-Tests ersetzen dies nicht. Desktop-Builds folgen bei Änderungen an der Paketierung bzw. vor einer Desktop-Auslieferung.
-
-Für neue Regeln besonders prüfen: Vorschau entspricht Abrechnung, Sammelaktionen sind vollständig oder wirkungslos, Zeitüberspringen entspricht Einzeltagen, Löhne werden genau einmal fällig, Transfers erhalten Warenalter, Vorschauen verbrauchen keinen Zufall und fehlgeschlagene Importe erhalten das aktive Spiel.
+MSI-Produktversion: 0.1.0; Git-Tag, API und Quellpakete: `v0.1.0-alpha.1`. MSI erfordert hier eine numerische Version. Projekt- und Fremdlizenzhinweise werden mitinstalliert.

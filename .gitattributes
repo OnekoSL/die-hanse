@@ -9,3 +9,7 @@
 *.pdf binary
 *.woff binary
 *.woff2 binary
+
+# Preserve whitespace in original third-party license texts.
+THIRD-PARTY-NOTICES.txt -whitespace
+licenses/third-party/** -whitespace

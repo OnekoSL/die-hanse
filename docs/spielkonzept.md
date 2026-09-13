@@ -1,66 +1,70 @@
-# Spielkonzept
+# Spielkonzept – Alpha 0.1.0
 
-Stand: 12. September 2026. **Vorschlag für das gemeinsame Spiel.**
+Verbindlicher Stand: 13. September 2026. Die Startbalance wird nach Spielerfahrungen weiterentwickelt.
 
-## Leitidee
+## Einstieg und Welt
 
-Der Spieler baut von Lübeck aus ein Handelshaus auf. Anfangs entscheidet er selbst über Einkauf, Ladung und Reiseziel. Später erweitert er seine Flotte, richtet Kontore ein und überträgt wiederkehrende Geschäfte an Verwalter. Er bleibt für Investitionen, Liquidität und die Wahl lohnender Routen verantwortlich.
+Am 1. März 1400 beginnt ein Handelshaus in Lübeck mit 1.000 Mark, einer Standardkogge (40 Last insgesamt, 20 je Ware) und einem Kontor der Stufe 1 (80 insgesamt, 30 je Ware). Der Ablauf ist Kaufen → Reisen → Verkaufen → Ausbauen → Speichern und Fortsetzen.
 
-Der zentrale Ablauf lautet: Marktinformation → Handelsentscheidung → Transport → Verkauf → Ausbau → Delegation. Die Verwaltung soll Entscheidungen erleichtern, ohne die Marktregeln zu umgehen.
+| Stadt | Hauptware |
+| --- | --- |
+| Lübeck | Salz |
+| London | Tuch |
+| Rostock | Holz |
+| Danzig | Getreide |
+| Riga | Wachs |
+| Visby | Fisch |
+| Hamburg | Malz |
+| Stockholm | Eisen |
+| Bergen | Fisch |
+| Brügge | Tuch |
+| Nowgorod | Felle |
 
-## Was aus beiden Spielen kommt
+Alle neun Waren sind in jedem Markt grundsätzlich handelbar. `Pelze` bleibt die technische Kennung für die Anzeige „Felle“. Weitere technische Stadtnamen verwenden beispielsweise `Luebeck` und `Bruegge`.
 
-| Bereich | Erster Prototyp: Handelssimulation | Zweiter Prototyp: Dein Handelshaus | Gemeinsame Richtung |
-| --- | --- | --- | --- |
-| Handelswelt | Freie Fahrten zwischen sechs Städten, alle sechs Waren in jedem Markt | Lübeck und sieben Auslandshäfen mit festen Rückwaren | Freies Routennetz, schrittweise um weitere Häfen erweitern |
-| Markt | Lokale Bestände, Spread, aktuelle/veraltete Informationen | Saisonpreise und Sättigung beim Lübecker Verkauf | Lokale Märkte behalten, mengenabhängige Vorschau übernehmen |
-| Zeit | Einzelne Tage, unterschiedliche Reisedauern | Monatsrunden ab März 1400, alle Fahrten kehren zum nächsten Wechsel zurück | Individuelle Tagesreisen und zusätzliche Monatsabrechnung |
-| Unternehmen | Mehrere Schiffe, vier Kontorstufen | Personal, drei Kontorstufen, Freischaltungen und Berichte | Ausbau mit konkreten Vorteilen und bezahlter Automatisierung |
-| Gefahren | Keine zufälligen Reiseverluste | Sturm, Piraten, Geschütze und robustes Schiff | Nach dem ersten Handelsablauf als gespeicherte, reproduzierbare Risiken ergänzen |
-| Warenveredelung | Noch nicht vorhanden | Manufakturen schalten andere Rückwaren frei | Erst einen Warenzweig integrieren; echte Produktion separat planen |
+## Märkte und Geld
 
-Beide Spiele teilen Thema, Mark als Geldgröße, Flottenausbau, Kontore, Warenlager, Marktreaktionen und lokale Spielstände. Ihre Zahlen und Zeitmodelle sind unterschiedlich balanciert und werden nicht unverändert zusammengerechnet.
+Basispreise in Mark: Salz 17, Getreide 10, Holz 12, Tuch 19, Felle 22, Fisch 11, Malz 8, Eisen 15, Wachs 20. Die sechs bisherigen Waren und Stadtfaktoren stammen aus A. Neue Kombinationen beginnen bei 1,00, neue Hauptwaren bei 0,80; Riga erhält Wachs als Hauptware und Felle-Faktor 1,00.
 
-## Vorschlag für die Grundregeln
+Startbestand je Ware: Hauptware 160, andere 80. Marktgrenze 200. Hauptware produziert täglich 5 und verbraucht 2; alle anderen produzieren 0 und verbrauchen 2. Produktion wird bei der Marktgrenze begrenzt, Verbrauch bei null.
 
-1. **Eine Spielzeit:** Alle Schiffe, Märkte, Aufträge und Monatsabrechnungen folgen derselben Tagesuhr. Eine Monatsgrenze beendet keine Reise vorzeitig.
-2. **Freier Handel:** Ein eigenes Schiff darf im Zielhafen handeln. Ein Auslandskontor ist zusätzlicher Lager-, Informations- und Verwaltungsstandort.
-3. **Eine Preisberechnung:** Vorschau, manueller Handel und automatische Aufträge verwenden dieselbe Backend-Berechnung. Die Bestandswirkung der gehandelten Menge wird berücksichtigt.
-4. **Zeitneutrale Befehle:** Kaufen, Verkaufen, Umladen und Bestellen schalten die Uhr nicht weiter. Bau- und Lieferaufträge werden erst zu ihrem Fertigstellungstermin verfügbar.
-5. **Bezahlte Delegation:** Daueraufträge benötigen angestelltes und bezahltes Personal. Reserven, Mindestpreise, Mengen und Prioritäten bleiben unter Kontrolle des Spielers.
-6. **Verständliche Information:** Unbekannte oder veraltete Marktberichte bleiben erkennbar. Eine Erlösschätzung bei Ankunft ist kein verbindliches Verkaufsangebot.
-7. **Nachvollziehbare Waren:** Gesamt- und Pro-Ware-Kapazitäten gelten auch für automatische Aktionen. Umladen setzt das Alter einer Ware nicht zurück.
-8. **Nachvollziehbare Finanzen:** Bargeld, Investitionen, laufende Kosten und Vermögensschätzung werden getrennt dargestellt.
+Geld wird als ganze Hundertstel-Mark gespeichert. Jede gehandelte Einheit verändert den Bestand vor der Preisberechnung der nächsten Einheit. Vorschau und Buchung verwenden dieselbe Berechnung einschließlich Rundung: Teilkäufe kosten bei unverändertem Datum und ohne andere Marktänderung zusammen genauso viel wie ein Gesamtkauf. Geld, Warenbestand sowie Gesamt- und Pro-Ware-Kapazitäten müssen für die ganze Aktion ausreichen. Sonst bleibt der Spielstand unverändert.
 
-Geldrundung, Kalendergrenzen, Dienstperioden, Lagerüberlauf, Kontorfreischaltungen und spätere Schuldengrenzen stehen im [Entscheidungsregister](entscheidungen.md). Bis zu ihrer Festlegung sind diese Punkte keine verbindlichen Spielregeln.
+Eine Vorschau enthält die Revision der Sitzung. Eine andere erfolgreiche Spielaktion macht sie ungültig. Dann muss der Spieler eine neue Vorschau anfordern. Handel und Bestellungen verbrauchen keine Tage.
 
-## Erster gemeinsamer spielbarer Stand
+Marktinformationen sind durch ein eigenes Schiff im Hafen oder ein Kontor aktuell. Andernfalls erscheinen der letzte bekannte Stand und sein Alter; bisher nicht besuchte Märkte bleiben unbekannt.
 
-Der erste gemeinsame Spielumfang baut zunächst auf den sechs Städten und sechs Waren der Handelssimulation auf. Damit können Infrastruktur und Bedienung geprüft werden, ohne gleichzeitig die gesamte Wirtschaft zu vergrößern.
+## Reisen und Kalender
 
-- Start in Lübeck mit einer überschaubaren Flotte; genaue Startwerte zunächst aus der übernommenen Basis, später gesondert abstimmen.
-- Seekarte und gleichwertige Hafenliste, beide mit Auswahl eines Hafens und der dort möglichen Aktionen.
-- Klar beschriftetes Kaufen, Verkaufen und Umladen mit Mengenauswahl, Gesamtsumme und Kapazitätsanzeige.
-- Reisen mit unterschiedlichen Tagesdauern; Vorspulen bis zum nächsten Ereignis.
-- Monatsübersicht über Geldbewegungen und eingetroffene Waren.
-- Ein ausdrücklich angestellter Verwalter kann eine wiederkehrende Handelsroute ausführen.
-- Sichtbare Pausengründe bei fehlendem Geld, Platz, Bestand oder unpassenden Preisen.
-- Speichern und Fortsetzen ohne Verlust von Geld, Fracht, Aufträgen oder Marktinformationen.
+Schiffe bleiben nach Ankunft im Zielhafen und können dort handeln oder weiterreisen. Mehrere Reisen laufen gleichzeitig. Die 15 bisherigen Verbindungen behalten ihre Dauern. Neue beidseitige Verbindungen: Hamburg–Lübeck 2, Hamburg–London 4, Brügge–London 2, Brügge–Hamburg 3, Bergen–Hamburg 4, Bergen–London 4, Stockholm–Visby 2, Stockholm–Riga 3, Nowgorod–Riga 3 Tage. Fehlende direkte Verbindungen erhalten die kürzeste Gesamtdauer durch dieses Netz ohne Zwischenstopps.
 
-**Abnahmebeispiel:** Manuell eine Route kaufen → reisen → verkaufen durchführen, Kontor ausbauen, Verwalter einstellen und denselben Ablauf delegieren. Ein absichtlich zu hoher Mindestpreis pausiert den Auftrag. Nach Korrektur und erneutem Zeitfortschritt kann er weiterlaufen. Alle Buchungen erscheinen im Handelsbuch.
+Der Kalender verwendet reale Monatslängen und technisch die gregorianische Schaltjahrregel. Ein Tageswechsel verarbeitet: alten Monat gegebenenfalls abschließen → Datum erhöhen → Märkte aktualisieren → Bauaufträge fertigstellen → Schiffe ankommen lassen → Marktinformationen aktualisieren. Vorspulen verarbeitet dieselben Tageswechsel bis zum nächsten Bauabschluss, einer Ankunft oder dem nächsten Monatsanfang.
 
-## Danach erweitern
+Monatsberichte zeigen Anfangs- und Endgeld, Handelseinnahmen, Wareneinkäufe, Ausbauausgaben und gegebenenfalls Vermögensverkäufe. Der Geldüberschuss ist keine Berechnung des Unternehmensgewinns.
 
-Jahreszeiten, Reisegefahren und Schiffsausrüstung folgen auf den funktionierenden Handelsablauf. Bergen mit Fisch und Stockfisch eignet sich anschließend als Pilot für Lageralter und Manufakturfreischaltung.
+## Ausbau
 
-Die vollständige Stadtvereinigung umfasst elf Städte: Lübeck, London, Rostock, Danzig, Riga, Visby, Hamburg, Stockholm, Bergen, Brügge und Nowgorod. Werden die bisherigen Pelze und Felle als eine Rohware behandelt, ergibt sich eine gemeinsame Menge von 16 Waren einschließlich Salz und Holz.
+| Schiff | Preis in Mark | Gesamt / je Ware | Bauzeit |
+| --- | ---: | ---: | ---: |
+| Standardkogge | 900 | 40 / 20 | 7 Tage |
+| Große Kogge | 1.600 | 70 / 35 | 14 Tage |
+| Fernhändler | 2.600 | 100 / 50 | 21 Tage |
 
-Manufakturen des zweiten Spiels sind aktuell zusätzliche Rückwarenoptionen innerhalb einer Salzfahrt. Rohstoffverbrauch, Produktionsdauer und Produktionsgebäude bilden einen weiteren Ausbau und werden nicht als bereits vorhandene Funktion eingeplant.
+| Kontorstufe | Gesamt / je Ware | Preis dieser Bestellung in Mark |
+| --- | ---: | ---: |
+| 1 | 80 / 30 | 200 |
+| 2 | 140 / 50 | 350 |
+| 3 | 220 / 80 | 600 |
+| 4 | 320 / 120 | 950 |
 
-NPC-Handelshäuser, Politik, Mehrspieler und komplexe Kreditmärkte gehören nicht zum ersten gemeinsamen Spielumfang. Es gibt für diese Erweiterungen noch keinen Termin.
+Kontorbau und jeder Ausbau dauern sieben Tage. Zahlung bei Bestellung, neue Kapazität ab Fertigstellung. Während des Ausbaus bleibt die bisherige Kapazität nutzbar. Je Stadt ist nur ein Kontorauftrag gleichzeitig möglich. Stornieren folgt später. Bestehende A-Verkaufsregeln gelten: halber Anschaffungspreis, kein Verkauf des letzten, beladenen oder reisenden Schiffs; Kontorrückbau nur bei passenden Restbeständen und ohne laufenden Bauauftrag.
 
-## Gestaltung
+## Bedienung und Speicherung
 
-Die Seekarte schafft Orientierung; Hafen, Markt, Flotte und Kontor bilden die wichtigsten Orte und Objekte. Warnungen erklären Folgen, etwa „Restbestand unterschritten“ oder „Lohn nicht finanzierbar“. Das Handelsbuch bündelt wiederholte Meldungen und hält besondere Ereignisse sichtbar.
+Startmenü mit Neu, Fortsetzen und Laden. Im Spiel stehen eine eigene schematische Hafenkarte mit gleichwertiger Liste, Flotte, Markt, Ladung/Kontor, Bauaufträge, Handelsbuch und Monatsberichte zur Verfügung. Beschriftete Standard-Steuerelemente unterstützen Tastaturbedienung und sichtbaren Fokus.
 
-Aktionen benötigen Tastaturbedienung, sichtbaren Fokus und verständliche Sperrgründe. Die Oberfläche soll bei kleinerem Fenster nutzbar bleiben. Grafiken und historische Gestaltung ergänzen die Lesbarkeit; Zahlen und Handlungsmöglichkeiten haben Vorrang.
+Jeder erfolgreiche Befehl speichert automatisch. Zusätzliche benannte Speicherplätze enthalten die vollständige Sitzung samt Reisen, Bauten, Berichten und Informationsalter. Überschreiben erfordert die Auswahl eines vorhandenen Platzes. Laden validiert vor Austausch der aktiven Sitzung; der vorherige Stand wird zusätzlich archiviert. Beschädigte oder unbekannte Versionen werden erhalten und verständlich abgewiesen.
+
+## Bewusst später
+
+Verwalter, automatische Routen, Produktion, Verderb, Reisegefahren und Altspielstand-Importe gehören nicht zu dieser Alpha. Auch eine Regelangleichung des separaten Backtests, Mehrspieler und Politik sind nicht enthalten.

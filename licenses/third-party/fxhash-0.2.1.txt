@@ -1,0 +1,55 @@
+fxhash 0.2.1
+License declaration in published Cargo.toml: Apache-2.0/MIT
+Authors: cbreeden <github@u.breeden.cc>
+Source: https://static.crates.io/crates/fxhash/fxhash-0.2.1.crate
+
+// Copyright 2015 The Rust Project Developers. See the COPYRIGHT
+// file at the top-level directory of this distribution and at
+// http://rust-lang.org/COPYRIGHT.
+//
+// Licensed under the Apache License, Version 2.0 <LICENSE-APACHE or
+// http://www.apache.org/licenses/LICENSE-2.0> or the MIT license
+// <LICENSE-MIT or http://opensource.org/licenses/MIT>, at your
+// option. This file may not be copied, modified, or distributed
+// except according to those terms.
+
+#![deny(missing_docs)]
+
+//! # Fx Hash
+//!
+//! This hashing algorithm was extracted from the Rustc compiler.  This is the same hashing
+//! algoirthm used for some internal operations in FireFox.  The strength of this algorithm
+//! is in hashing 8 bytes at a time on 64-bit platforms, where the FNV algorithm works on one
+//! byte at a time.
+//!
+//! ## Disclaimer
+//!
+//! It is **not a cryptographically secure** hash, so it is strongly recommended that you do
+//! not use this hash for cryptographic purproses.  Furthermore, this hashing algorithm was
+//! not designed to prevent any attacks for determining collisions which could be used to
+//! potentially cause quadratic behavior in `HashMap`s.  So it is not recommended to expose
+//! this hash in places where collissions or DDOS attacks may be a concern.
+
+use std::collections::{HashMap, HashSet};
+use std::default::Default;
+use std::hash::{Hasher, Hash, BuildHasherDefault};
+
+The MIT option is selected. MIT license terms:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

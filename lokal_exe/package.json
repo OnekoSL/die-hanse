@@ -1,0 +1,19 @@
+{
+  "name": "die-hanse-desktop",
+  "version": "0.1.0-alpha.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:web": "npm.cmd --prefix ../web_ui/frontend run build:desktop",
+    "build:backend": "powershell -ExecutionPolicy Bypass -File ./scripts/build-backend.ps1",
+    "dev": "npm run build:backend && tauri dev",
+    "build:msi": "powershell -ExecutionPolicy Bypass -File ./scripts/build-msi.ps1",
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  }
+}

@@ -1,0 +1,57 @@
+convert_case 0.4.0
+License declaration in published Cargo.toml: MIT
+Authors: David Purdum <purdum41@gmail.com>
+Source: https://static.crates.io/crates/convert_case/convert_case-0.4.0.crate
+
+//! Converts to and from various cases.
+//!
+//! # Command Line Utility `ccase`
+//!
+//! Since version "0.3.0" this crate is just a case conversion _library_.  The command line utility
+//! that uses the tools in this library has been moved to the `ccase` crate.  You can read about it
+//! at the [github repository](https://github.com/rutrum/convert-case/tree/master/ccase).
+//!
+//! # Rust Library
+//!
+//! Provides a [`Case`](enum.Case.html) enum which defines a variety of cases to convert into.
+//! A `Case` can be used with an item that implements the [`Casing`](trait.Casing.html) trait,
+//! which allows the item to be converted to a given case.
+//!
+//! You can convert a string or string slice into a case using the `to_case` method.
+//! ```
+//! use convert_case::{Case, Casing};
+//!
+//! assert_eq!("Ronnie James Dio", "ronnie james dio".to_case(Case::Title));
+//! assert_eq!("ronnieJamesDio", "Ronnie_James_dio".to_case(Case::Camel));
+//! assert_eq!("Ronnie-James-Dio", "RONNIE_JAMES_DIO".to_case(Case::Train));
+//! ```
+//!
+//! By default, `to_case` will split along all word boundaries, that is
+//! * space characters ` `,
+//! * underscores `_`,
+//! * hyphens `-`,
+//! * and changes in capitalization `aA`.
+//!
+//! For more accuracy, the `from_case` method splits based on the word boundaries
+
+MIT License
+
+Copyright (c) 2025 rutrum
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

@@ -1,0 +1,42 @@
+name: Windows MSI
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  msi:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python build environment
+        shell: pwsh
+        run: |
+          python -m venv web_ui/backend/.venv
+          & ./web_ui/backend/.venv/Scripts/python.exe -m pip install -r web_ui/backend/requirements-build.txt -r web_ui/backend/requirements-dev.txt
+      - run: npm.cmd --prefix web_ui/frontend ci
+      - run: npm.cmd --prefix lokal_exe ci
+      - name: Tests
+        shell: pwsh
+        run: ./scripts/test.ps1
+      - name: Build installer
+        working-directory: lokal_exe
+        shell: pwsh
+        run: |
+          rustup toolchain install 1.93.1 --profile minimal
+          rustup default 1.93.1
+          npm.cmd run build:web
+          npm.cmd run build:backend
+          npx.cmd tauri build --bundles msi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: die-hanse-windows-x64
+          path: lokal_exe/src-tauri/target/release/bundle/msi/*.msi
+          if-no-files-found: error

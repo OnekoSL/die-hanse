@@ -1,0 +1,55 @@
+mac 0.1.1
+License declaration in published Cargo.toml: MIT/Apache-2.0
+Authors: Jonathan Reem <jonathan.reem@gmail.com>
+Source: https://static.crates.io/crates/mac/mac-0.1.1.crate
+
+#![cfg_attr(test, deny(warnings))]
+#![deny(missing_docs)]
+
+//! # mac
+//!
+//! A collection of great and ubiqutitous macros.
+//!
+
+pub mod test;
+pub mod mem;
+pub mod format;
+pub mod syntax_ext;
+pub mod matches;
+pub mod inspect;
+pub mod cfg;
+
+/// Unwraps an `Option` or returns from the function with the specified return
+/// value.
+///
+/// Can be used on `Result`s by first calling `.ok()` or `.err()` on them.
+///
+/// # Examples
+///
+/// ```
+/// # #[macro_use] extern crate mac;
+/// fn take_pair<I:Iterator>(iter: &mut I) -> Option<(<I as Iterator>::Item, <I as Iterator>::Item)> {
+///    let first = unwrap_or_return!(iter.next(), None);
+///    Some((first, unwrap_or_return!(iter.next(), None)))
+/// }
+/// # fn main() { }
+
+The MIT option is selected. MIT license terms:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

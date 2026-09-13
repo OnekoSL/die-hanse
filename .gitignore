@@ -74,3 +74,6 @@ Saves/
 *.tmp
 .dev-pids
 tmp/
+
+!web_ui/frontend/.env.desktop
+lokal_exe/src-tauri/gen/

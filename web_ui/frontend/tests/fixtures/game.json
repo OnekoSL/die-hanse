@@ -1,0 +1,1060 @@
+{
+  "state": {
+    "session_id": "178a1d9b-6d08-4ae4-a2f5-68912dc3a41d",
+    "status": "active",
+    "current_day": 0,
+    "cash": 100000,
+    "avatar_id": "merchant",
+    "ships": [
+      {
+        "id": "ship-1",
+        "name": "Kogge I",
+        "class_id": "kogge_standard",
+        "buy_price": 90000,
+        "current_city": "Luebeck",
+        "at_sea": false,
+        "destination": null,
+        "eta_days": 0,
+        "cargo": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        },
+        "capacity_total": 40,
+        "max_per_good": 20,
+        "capacity": 40
+      }
+    ],
+    "active_ship_id": "ship-1",
+    "revision": "a287c2c9-d985-49d7-805d-960f2e4b685e",
+    "format_version": 1,
+    "world_version": "alpha-world-1",
+    "rules_version": 1,
+    "orders": [],
+    "reports": [],
+    "intel": {},
+    "events": [],
+    "month": {
+      "opening_cash": 100000,
+      "trade_income": 0,
+      "trade_expenses": 0,
+      "construction_expenses": 0,
+      "asset_income": 0
+    },
+    "ship": {
+      "id": "ship-1",
+      "name": "Kogge I",
+      "class_id": "kogge_standard",
+      "buy_price": 90000,
+      "current_city": "Luebeck",
+      "at_sea": false,
+      "destination": null,
+      "eta_days": 0,
+      "cargo": {
+        "Salz": 0,
+        "Getreide": 0,
+        "Holz": 0,
+        "Tuch": 0,
+        "Pelze": 0,
+        "Fisch": 0,
+        "Malz": 0,
+        "Eisen": 0,
+        "Wachs": 0
+      },
+      "capacity_total": 40,
+      "max_per_good": 20,
+      "capacity": 40
+    },
+    "date": "1400-03-01",
+    "routes": [
+      {
+        "from": "Bergen",
+        "to": "Bruegge",
+        "days": 6
+      },
+      {
+        "from": "Bergen",
+        "to": "Danzig",
+        "days": 10
+      },
+      {
+        "from": "Bergen",
+        "to": "Hamburg",
+        "days": 4
+      },
+      {
+        "from": "Bergen",
+        "to": "London",
+        "days": 4
+      },
+      {
+        "from": "Bergen",
+        "to": "Luebeck",
+        "days": 6
+      },
+      {
+        "from": "Bergen",
+        "to": "Nowgorod",
+        "days": 14
+      },
+      {
+        "from": "Bergen",
+        "to": "Riga",
+        "days": 11
+      },
+      {
+        "from": "Bergen",
+        "to": "Rostock",
+        "days": 8
+      },
+      {
+        "from": "Bergen",
+        "to": "Stockholm",
+        "days": 12
+      },
+      {
+        "from": "Bergen",
+        "to": "Visby",
+        "days": 10
+      },
+      {
+        "from": "Bruegge",
+        "to": "Bergen",
+        "days": 6
+      },
+      {
+        "from": "Bruegge",
+        "to": "Danzig",
+        "days": 8
+      },
+      {
+        "from": "Bruegge",
+        "to": "Hamburg",
+        "days": 3
+      },
+      {
+        "from": "Bruegge",
+        "to": "London",
+        "days": 2
+      },
+      {
+        "from": "Bruegge",
+        "to": "Luebeck",
+        "days": 5
+      },
+      {
+        "from": "Bruegge",
+        "to": "Nowgorod",
+        "days": 12
+      },
+      {
+        "from": "Bruegge",
+        "to": "Riga",
+        "days": 9
+      },
+      {
+        "from": "Bruegge",
+        "to": "Rostock",
+        "days": 7
+      },
+      {
+        "from": "Bruegge",
+        "to": "Stockholm",
+        "days": 10
+      },
+      {
+        "from": "Bruegge",
+        "to": "Visby",
+        "days": 8
+      },
+      {
+        "from": "Danzig",
+        "to": "Bergen",
+        "days": 10
+      },
+      {
+        "from": "Danzig",
+        "to": "Bruegge",
+        "days": 8
+      },
+      {
+        "from": "Danzig",
+        "to": "Hamburg",
+        "days": 6
+      },
+      {
+        "from": "Danzig",
+        "to": "London",
+        "days": 6
+      },
+      {
+        "from": "Danzig",
+        "to": "Luebeck",
+        "days": 4
+      },
+      {
+        "from": "Danzig",
+        "to": "Nowgorod",
+        "days": 7
+      },
+      {
+        "from": "Danzig",
+        "to": "Riga",
+        "days": 4
+      },
+      {
+        "from": "Danzig",
+        "to": "Rostock",
+        "days": 3
+      },
+      {
+        "from": "Danzig",
+        "to": "Stockholm",
+        "days": 6
+      },
+      {
+        "from": "Danzig",
+        "to": "Visby",
+        "days": 4
+      },
+      {
+        "from": "Hamburg",
+        "to": "Bergen",
+        "days": 4
+      },
+      {
+        "from": "Hamburg",
+        "to": "Bruegge",
+        "days": 3
+      },
+      {
+        "from": "Hamburg",
+        "to": "Danzig",
+        "days": 6
+      },
+      {
+        "from": "Hamburg",
+        "to": "London",
+        "days": 4
+      },
+      {
+        "from": "Hamburg",
+        "to": "Luebeck",
+        "days": 2
+      },
+      {
+        "from": "Hamburg",
+        "to": "Nowgorod",
+        "days": 11
+      },
+      {
+        "from": "Hamburg",
+        "to": "Riga",
+        "days": 8
+      },
+      {
+        "from": "Hamburg",
+        "to": "Rostock",
+        "days": 4
+      },
+      {
+        "from": "Hamburg",
+        "to": "Stockholm",
+        "days": 8
+      },
+      {
+        "from": "Hamburg",
+        "to": "Visby",
+        "days": 6
+      },
+      {
+        "from": "London",
+        "to": "Bergen",
+        "days": 4
+      },
+      {
+        "from": "London",
+        "to": "Bruegge",
+        "days": 2
+      },
+      {
+        "from": "London",
+        "to": "Danzig",
+        "days": 6
+      },
+      {
+        "from": "London",
+        "to": "Hamburg",
+        "days": 4
+      },
+      {
+        "from": "London",
+        "to": "Luebeck",
+        "days": 5
+      },
+      {
+        "from": "London",
+        "to": "Nowgorod",
+        "days": 10
+      },
+      {
+        "from": "London",
+        "to": "Riga",
+        "days": 7
+      },
+      {
+        "from": "London",
+        "to": "Rostock",
+        "days": 5
+      },
+      {
+        "from": "London",
+        "to": "Stockholm",
+        "days": 8
+      },
+      {
+        "from": "London",
+        "to": "Visby",
+        "days": 6
+      },
+      {
+        "from": "Luebeck",
+        "to": "Bergen",
+        "days": 6
+      },
+      {
+        "from": "Luebeck",
+        "to": "Bruegge",
+        "days": 5
+      },
+      {
+        "from": "Luebeck",
+        "to": "Danzig",
+        "days": 4
+      },
+      {
+        "from": "Luebeck",
+        "to": "Hamburg",
+        "days": 2
+      },
+      {
+        "from": "Luebeck",
+        "to": "London",
+        "days": 5
+      },
+      {
+        "from": "Luebeck",
+        "to": "Nowgorod",
+        "days": 9
+      },
+      {
+        "from": "Luebeck",
+        "to": "Riga",
+        "days": 6
+      },
+      {
+        "from": "Luebeck",
+        "to": "Rostock",
+        "days": 2
+      },
+      {
+        "from": "Luebeck",
+        "to": "Stockholm",
+        "days": 6
+      },
+      {
+        "from": "Luebeck",
+        "to": "Visby",
+        "days": 4
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Bergen",
+        "days": 14
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Bruegge",
+        "days": 12
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Danzig",
+        "days": 7
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Hamburg",
+        "days": 11
+      },
+      {
+        "from": "Nowgorod",
+        "to": "London",
+        "days": 10
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Luebeck",
+        "days": 9
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Riga",
+        "days": 3
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Rostock",
+        "days": 8
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Stockholm",
+        "days": 6
+      },
+      {
+        "from": "Nowgorod",
+        "to": "Visby",
+        "days": 6
+      },
+      {
+        "from": "Riga",
+        "to": "Bergen",
+        "days": 11
+      },
+      {
+        "from": "Riga",
+        "to": "Bruegge",
+        "days": 9
+      },
+      {
+        "from": "Riga",
+        "to": "Danzig",
+        "days": 4
+      },
+      {
+        "from": "Riga",
+        "to": "Hamburg",
+        "days": 8
+      },
+      {
+        "from": "Riga",
+        "to": "London",
+        "days": 7
+      },
+      {
+        "from": "Riga",
+        "to": "Luebeck",
+        "days": 6
+      },
+      {
+        "from": "Riga",
+        "to": "Nowgorod",
+        "days": 3
+      },
+      {
+        "from": "Riga",
+        "to": "Rostock",
+        "days": 5
+      },
+      {
+        "from": "Riga",
+        "to": "Stockholm",
+        "days": 3
+      },
+      {
+        "from": "Riga",
+        "to": "Visby",
+        "days": 3
+      },
+      {
+        "from": "Rostock",
+        "to": "Bergen",
+        "days": 8
+      },
+      {
+        "from": "Rostock",
+        "to": "Bruegge",
+        "days": 7
+      },
+      {
+        "from": "Rostock",
+        "to": "Danzig",
+        "days": 3
+      },
+      {
+        "from": "Rostock",
+        "to": "Hamburg",
+        "days": 4
+      },
+      {
+        "from": "Rostock",
+        "to": "London",
+        "days": 5
+      },
+      {
+        "from": "Rostock",
+        "to": "Luebeck",
+        "days": 2
+      },
+      {
+        "from": "Rostock",
+        "to": "Nowgorod",
+        "days": 8
+      },
+      {
+        "from": "Rostock",
+        "to": "Riga",
+        "days": 5
+      },
+      {
+        "from": "Rostock",
+        "to": "Stockholm",
+        "days": 6
+      },
+      {
+        "from": "Rostock",
+        "to": "Visby",
+        "days": 4
+      },
+      {
+        "from": "Stockholm",
+        "to": "Bergen",
+        "days": 12
+      },
+      {
+        "from": "Stockholm",
+        "to": "Bruegge",
+        "days": 10
+      },
+      {
+        "from": "Stockholm",
+        "to": "Danzig",
+        "days": 6
+      },
+      {
+        "from": "Stockholm",
+        "to": "Hamburg",
+        "days": 8
+      },
+      {
+        "from": "Stockholm",
+        "to": "London",
+        "days": 8
+      },
+      {
+        "from": "Stockholm",
+        "to": "Luebeck",
+        "days": 6
+      },
+      {
+        "from": "Stockholm",
+        "to": "Nowgorod",
+        "days": 6
+      },
+      {
+        "from": "Stockholm",
+        "to": "Riga",
+        "days": 3
+      },
+      {
+        "from": "Stockholm",
+        "to": "Rostock",
+        "days": 6
+      },
+      {
+        "from": "Stockholm",
+        "to": "Visby",
+        "days": 2
+      },
+      {
+        "from": "Visby",
+        "to": "Bergen",
+        "days": 10
+      },
+      {
+        "from": "Visby",
+        "to": "Bruegge",
+        "days": 8
+      },
+      {
+        "from": "Visby",
+        "to": "Danzig",
+        "days": 4
+      },
+      {
+        "from": "Visby",
+        "to": "Hamburg",
+        "days": 6
+      },
+      {
+        "from": "Visby",
+        "to": "London",
+        "days": 6
+      },
+      {
+        "from": "Visby",
+        "to": "Luebeck",
+        "days": 4
+      },
+      {
+        "from": "Visby",
+        "to": "Nowgorod",
+        "days": 6
+      },
+      {
+        "from": "Visby",
+        "to": "Riga",
+        "days": 3
+      },
+      {
+        "from": "Visby",
+        "to": "Rostock",
+        "days": 4
+      },
+      {
+        "from": "Visby",
+        "to": "Stockholm",
+        "days": 2
+      }
+    ],
+    "cities": [
+      "Luebeck",
+      "London",
+      "Rostock",
+      "Danzig",
+      "Riga",
+      "Visby",
+      "Hamburg",
+      "Stockholm",
+      "Bergen",
+      "Bruegge",
+      "Nowgorod"
+    ],
+    "city_primary_goods": {
+      "Luebeck": "Salz",
+      "London": "Tuch",
+      "Rostock": "Holz",
+      "Danzig": "Getreide",
+      "Riga": "Wachs",
+      "Visby": "Fisch",
+      "Hamburg": "Malz",
+      "Stockholm": "Eisen",
+      "Bergen": "Fisch",
+      "Bruegge": "Tuch",
+      "Nowgorod": "Pelze"
+    },
+    "travel_mode": "normal",
+    "player_profile": {
+      "avatar_id": "merchant",
+      "avatar_url": "/avatars/merchant.svg"
+    },
+    "private_storages": [
+      {
+        "city": "Bergen",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Bruegge",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Danzig",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Hamburg",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "London",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Luebeck",
+        "level": 1,
+        "active": true,
+        "capacity_total": 80,
+        "max_per_good": 30,
+        "capacity": 80,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Nowgorod",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Riga",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Rostock",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Stockholm",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      },
+      {
+        "city": "Visby",
+        "level": 0,
+        "active": false,
+        "capacity_total": 0,
+        "max_per_good": 0,
+        "capacity": 0,
+        "stock_by_good": {
+          "Salz": 0,
+          "Getreide": 0,
+          "Holz": 0,
+          "Tuch": 0,
+          "Pelze": 0,
+          "Fisch": 0,
+          "Malz": 0,
+          "Eisen": 0,
+          "Wachs": 0
+        }
+      }
+    ],
+    "pending_event_hint": "Schiff im Hafen"
+  },
+  "catalog": {
+    "ships": [
+      {
+        "id": "kogge_standard",
+        "name": "Kogge Standard",
+        "capacity_total": 40,
+        "max_per_good": 20,
+        "capacity": 40,
+        "buy_price": 90000,
+        "sell_price": 45000,
+        "build_days": 7
+      },
+      {
+        "id": "grosse_kogge",
+        "name": "Grosse Kogge",
+        "capacity_total": 70,
+        "max_per_good": 35,
+        "capacity": 70,
+        "buy_price": 160000,
+        "sell_price": 80000,
+        "build_days": 14
+      },
+      {
+        "id": "fernhaendler",
+        "name": "Fernhaendler",
+        "capacity_total": 100,
+        "max_per_good": 50,
+        "capacity": 100,
+        "buy_price": 260000,
+        "sell_price": 130000,
+        "build_days": 21
+      }
+    ],
+    "storages": [
+      {
+        "level": 1,
+        "capacity_total": 80,
+        "max_per_good": 30,
+        "capacity": 80,
+        "buy_price": 20000,
+        "sell_price": 10000,
+        "build_days": 7
+      },
+      {
+        "level": 2,
+        "capacity_total": 140,
+        "max_per_good": 50,
+        "capacity": 140,
+        "buy_price": 35000,
+        "sell_price": 17500,
+        "build_days": 7
+      },
+      {
+        "level": 3,
+        "capacity_total": 220,
+        "max_per_good": 80,
+        "capacity": 220,
+        "buy_price": 60000,
+        "sell_price": 30000,
+        "build_days": 7
+      },
+      {
+        "level": 4,
+        "capacity_total": 320,
+        "max_per_good": 120,
+        "capacity": 320,
+        "buy_price": 95000,
+        "sell_price": 47500,
+        "build_days": 7
+      }
+    ]
+  },
+  "city": {
+    "city": "Luebeck",
+    "primary_good": "Salz",
+    "visibility_level": "live_both",
+    "has_live_visibility": true,
+    "last_seen_day": 0,
+    "days_stale": 0,
+    "status_hint": "Live-Daten durch Schiff und Kontor.",
+    "markets": [
+      {
+        "city": "Luebeck",
+        "good": "Eisen",
+        "stock": 80,
+        "marktpreis": 1650,
+        "stadt_ankaufspreis": 1350,
+        "stadt_verkaufspreis": 1950,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Fisch",
+        "stock": 80,
+        "marktpreis": 1089,
+        "stadt_ankaufspreis": 891,
+        "stadt_verkaufspreis": 1287,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Getreide",
+        "stock": 80,
+        "marktpreis": 1100,
+        "stadt_ankaufspreis": 900,
+        "stadt_verkaufspreis": 1300,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Holz",
+        "stock": 80,
+        "marktpreis": 1320,
+        "stadt_ankaufspreis": 1080,
+        "stadt_verkaufspreis": 1560,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Malz",
+        "stock": 80,
+        "marktpreis": 880,
+        "stadt_ankaufspreis": 720,
+        "stadt_verkaufspreis": 1040,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Pelze",
+        "stock": 80,
+        "marktpreis": 2783,
+        "stadt_ankaufspreis": 2276,
+        "stadt_verkaufspreis": 3290,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Salz",
+        "stock": 160,
+        "marktpreis": 952,
+        "stadt_ankaufspreis": 843,
+        "stadt_verkaufspreis": 1061,
+        "production_rate": 5,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Tuch",
+        "stock": 80,
+        "marktpreis": 2404,
+        "stadt_ankaufspreis": 1966,
+        "stadt_verkaufspreis": 2842,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      },
+      {
+        "city": "Luebeck",
+        "good": "Wachs",
+        "stock": 80,
+        "marktpreis": 2200,
+        "stadt_ankaufspreis": 1800,
+        "stadt_verkaufspreis": 2600,
+        "production_rate": 0,
+        "consumption_rate": 2,
+        "zero_days": 0
+      }
+    ],
+    "ships_in_harbor": [
+      {
+        "id": "ship-1",
+        "name": "Kogge I"
+      }
+    ],
+    "latest_city_event_hint": "Schiff und Kontor berichten aus erster Hand."
+  }
+}
