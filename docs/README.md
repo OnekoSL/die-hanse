@@ -1,6 +1,6 @@
 # Dokumentation
 
-Stand: 13. September 2026. Die erste Basis ist implementiert und als öffentliche Vorabversion `v0.1.0-alpha.1` freigegeben.
+Stand: 13. September 2026. Die erste Basis ist implementiert und als öffentliche Vorabversion `v0.1.0-alpha.2` freigegeben.
 
 - [Spielkonzept und Regeln](spielkonzept.md)
 - [Architektur und Speicherung](architektur.md)
@@ -13,3 +13,5 @@ Stand: 13. September 2026. Die erste Basis ist implementiert und als öffentlich
 - [API-Vertrag](../web_ui/docs/api.md)
 
 Die ältere vollständige Gegenüberstellung verbleibt im Vorgängerprojekt. Diese Dokumentation beschreibt das gemeinsame Spiel eigenständig.
+
+- [Änderungen in Alpha 2](aenderungen.md)

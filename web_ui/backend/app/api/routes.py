@@ -41,7 +41,7 @@ router = APIRouter(prefix="/api/v1")
 
 @router.get("/health")
 def health() -> dict[str, str]:
-    return {"status": "ok", "application": "die-hanse", "version": "0.1.0-alpha.1"}
+    return {"status": "ok", "application": "die-hanse", "version": "0.1.0-alpha.2"}
 
 
 @router.get("/scenarios", response_model=list[ScenarioSummary])

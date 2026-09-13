@@ -601,3 +601,150 @@ footer {
     font-size: 15px;
   }
 }
+
+/* Keep the complete cargo visible beside the selected commodity. */
+.trade-layout {
+  align-items: start;
+}
+.cargo-panel {
+  grid-column: 1;
+  grid-row: 1;
+}
+.market-panel {
+  grid-column: 1;
+  grid-row: 2;
+  min-width: 0;
+}
+.cargo-panel {
+  border-top: 4px solid #2b5b4e;
+}
+.cargo-panel h2 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.cargo-panel .section-heading > strong {
+  white-space: nowrap;
+}
+.cargo-space {
+  margin: 8px 0 14px;
+  font-size: 12px;
+  color: #53634f;
+}
+.cargo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cargo-list button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f1f4ea;
+  font-size: 14px;
+}
+.cargo-list button[aria-pressed="true"] {
+  background: #e4ebd5;
+  border-color: #2b5b4e;
+  box-shadow: inset 3px 0 #2b5b4e;
+}
+.empty-cargo {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.market-panel tbody tr {
+  cursor: pointer;
+}
+.market-panel tbody tr:hover {
+  background: #f4f4e8;
+}
+.market-panel tbody tr.highlight {
+  background: #e9ecd9;
+  box-shadow: inset 3px 0 #2b5b4e;
+}
+.stock-present {
+  font-weight: 700;
+  color: #24543d;
+}
+.goods-panel {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+}
+.goods-overview {
+  border-bottom: 1px solid #dce1d1;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+.goods-overview h2 {
+  font-size: 32px;
+  margin: 8px 0 16px;
+}
+.goods-stock-grid,
+.goods-prices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.goods-stock-grid > div {
+  padding: 12px;
+  background: #edf1e2;
+  border-radius: 5px;
+}
+.goods-stock-grid span {
+  display: block;
+  font-size: 11px;
+  color: #53634f;
+}
+.goods-stock-grid strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 5px;
+}
+.goods-prices {
+  margin: 10px 0;
+}
+.goods-prices dt {
+  font-size: 12px;
+  color: #53634f;
+}
+.goods-prices dd {
+  margin: 5px 0 0;
+  font-size: 23px;
+  font-weight: 600;
+}
+.market-age {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.goods-panel label {
+  font-size: 12px;
+}
+.transfer-details summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+.transfer-details summary:focus-visible {
+  outline: 3px solid #ba7c18;
+  outline-offset: 4px;
+}
+.transfer-details p {
+  font-size: 12px;
+}
+@media (max-width: 1150px) {
+  .goods-panel {
+    grid-column: 1;
+    grid-row: 2;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .market-panel {
+    grid-row: 3;
+  }
+}

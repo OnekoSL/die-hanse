@@ -195,14 +195,12 @@ it("shows a rejected trade in German without changing the balance", async () => 
 });
 
 it("creates named saves without implicitly overwriting slots", async () => {
-  const save = vi
-    .spyOn(api, "saveGame")
-    .mockResolvedValue({
-      id: "s1",
-      name: "Meine Flotte",
-      date: state.date,
-      updated_at: "2026-09-13T00:00:00",
-    });
+  const save = vi.spyOn(api, "saveGame").mockResolvedValue({
+    id: "s1",
+    name: "Meine Flotte",
+    date: state.date,
+    updated_at: "2026-09-13T00:00:00",
+  });
   await enter();
   fireEvent.click(screen.getByRole("button", { name: "Spielstände" }));
   fireEvent.change(screen.getByLabelText("Name des Spielstands"), {
@@ -237,4 +235,69 @@ it("shows connection errors instead of treating them as a missing save", async (
   expect(await screen.findByRole("alert")).toHaveTextContent(
     "Das Spiel ist nicht erreichbar",
   );
+});
+
+it("selects a market row and shows its prices and inventory beside the complete cargo", async () => {
+  state.ship.cargo.Salz = 20;
+  await enter();
+  const manifest = screen.getByRole("region", { name: "Schiffsladung" });
+  expect(
+    within(manifest).getByRole("button", { name: "Salz 20 Last" }),
+  ).toBeInTheDocument();
+  expect(
+    within(manifest).queryByRole("button", { name: /Holz/ }),
+  ).not.toBeInTheDocument();
+  const wood = await screen.findByRole("row", { name: /^Holz / });
+  fireEvent.click(within(wood).getAllByRole("cell")[0]);
+  const details = screen.getByRole("region", { name: "Warendetails" });
+  expect(
+    within(details).getByRole("heading", { name: "Holz" }),
+  ).toBeInTheDocument();
+  expect(within(details).getByLabelText("Ware")).toHaveValue("Holz");
+  expect(details).toHaveTextContent("An Bord · Kogge I0 Last");
+  const woodMarket = fixture.city.markets.find((m) => m.good === "Holz")!;
+  const price = new Intl.NumberFormat("de-DE", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(woodMarket.stadt_verkaufspreis / 100);
+  expect(details).toHaveTextContent(price);
+  fireEvent.click(
+    within(manifest).getByRole("button", { name: "Salz 20 Last" }),
+  );
+  expect(
+    within(details).getByRole("heading", { name: "Salz" }),
+  ).toBeInTheDocument();
+  expect(details).toHaveTextContent("An Bord · Kogge I20 Last");
+});
+
+it("explains an empty hold and prevents a sale of absent goods", async () => {
+  await enter();
+  expect(
+    screen.getByRole("region", { name: "Schiffsladung" }),
+  ).toHaveTextContent("Das Schiff ist leer");
+  fireEvent.change(screen.getByLabelText("Aktion"), {
+    target: { value: "sell" },
+  });
+  await screen.findByText("Nur 0 Last Salz an Bord verfügbar.");
+  expect(
+    screen.getByRole("button", { name: "Handelsvorschau" }),
+  ).toBeDisabled();
+});
+
+it("marks old prices in the selected commodity overview", async () => {
+  vi.mocked(api.gameCityView).mockResolvedValue({
+    ...fixture.city,
+    visibility_level: "stale",
+    has_live_visibility: false,
+    days_stale: 5,
+  } as GameCityView);
+  await enter();
+  await waitFor(() =>
+    expect(
+      screen.getByRole("region", { name: "Warendetails" }),
+    ).toHaveTextContent("Letzter Marktbericht · vor 5 Tagen"),
+  );
+  expect(
+    screen.getByRole("button", { name: "Handelsvorschau" }),
+  ).toBeDisabled();
 });
