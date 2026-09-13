@@ -12,6 +12,7 @@ Stand: 13. September 2026. Implementierte Basis; öffentliche MSI-Freigabe warte
 | Frontend Node.js 22.23.2, Vitest | 15 Tests bestanden |
 | TypeScript und Vite, Web- und Desktop-Modus | Bestanden |
 | Windows x64 / Tauri / PyInstaller / MSI | Installer gebaut und lokal installiert |
+| Unabhängiger Windows-Build auf GitHub (Windows Server 2022) | Tests, MSI-Build und Artefaktbereitstellung bestanden ([Lauf](https://github.com/OnekoSL/die-hanse/actions/runs/34757328416)); keine interaktive Installationsabnahme auf diesem Runner |
 
 Die Backend-Tests prüfen unter anderem alle elf erreichbaren Häfen und neun Waren, Handelsvorschau/Buchung/Teilkäufe, Grenzen, ungültige Aktionen ohne Zustandsänderung, veraltete und gleichzeitig eingereichte Vorschauen, Marktinformationsalter, Bauzeiten, Monatswechsel und gleichzeitige Ereignisse, Speicherplätze, beschädigte/incompatible Stände und Neustarts. Ein simulierter Commit-Fehler ergibt keine Erfolgsmeldung und verändert den Zustand nicht.
 
