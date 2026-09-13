@@ -7,6 +7,7 @@ Stand: 13. September 2026. Implementierte Basis; öffentliche MSI-Freigabe warte
 | Prüfung | Ergebnis |
 | --- | --- |
 | Ruff Backend | Bestanden |
+| GitHub CI, Python 3.11 / Node 22 unter Linux | Backend und Frontend bestanden ([Lauf](https://github.com/OnekoSL/die-hanse/actions/runs/34757176610)) |
 | Backend Python 3.11.16, eigene temporäre SQLite-Datei | 75 Tests bestanden |
 | Frontend Node.js 22.23.2, Vitest | 15 Tests bestanden |
 | TypeScript und Vite, Web- und Desktop-Modus | Bestanden |
@@ -38,7 +39,7 @@ Installierter Backend-Ablauf über seine HTTP-Schnittstelle geprüft: Kaufen →
 
 Die native Bildschirmaufnahme des Automationswerkzeugs wird auf diesem Windows-Build nicht unterstützt; deshalb erfolgte die visuelle und vollständige Bedienprüfung im Browser. Der native Spielablauf wurde über das installierte Backend geprüft, nicht als vollständiger Maus-Test des WebView-Fensters ausgegeben.
 
-Portkonflikt, Fehlstart und Beendigung des eigenen Prozessbaums werden mit dem abschließenden Installer gesondert kontrolliert; Ergebnisse ergänzen diesen Abschnitt.
+Mit dem abschließenden Installer geprüft: Ein zweiter Start bei belegtem Port zeigt einen verständlichen Windows-Dialog. Nach dessen Bestätigung endet nur die zweite Instanz; die zuerst gestartete Sitzung und ihr Backend bleiben unverändert erreichbar. Der beim Test gefundene Tauri-Setup-Abbruch wurde vor dem abschließenden Build korrigiert.
 
 ## Noch offene Umgebungsabnahme
 

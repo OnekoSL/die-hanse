@@ -14,7 +14,7 @@ SQLite hält vollständige Snapshots in `game_snapshots`: ein automatischer Stan
 
 Formatversion 1, Weltversion `alpha-world-1`, Regelversion 1 und SHA-256-Prüfsumme sind voneinander getrennt. Struktur, Versionen, Preise, Waren, Kapazitäten und Reisen werden vor Verwendung geprüft. Unbekannte/beschädigte Stände werden unverändert erhalten. Ein gültiger Speicherplatz kann einen defekten automatischen Stand ablösen; dessen Originalbytes werden zuvor archiviert.
 
-Jede Spieloperation verwendet `BEGIN IMMEDIATE` in einer SQLite-Transaktion. Lesen–Prüfen–Ändern–Speichern bleibt auch zwischen Prozessen serialisiert. Fehler rollen vollständig zurück. Erfolgreiche Befehle und Laden erzeugen eine neue Zustandsrevision; veraltete Handelsvorschauen liefern HTTP 409.
+Jede Spieloperation verwendet `BEGIN IMMEDIATE` in einer SQLite-Transaktion. Lesen–Prüfen–Ändern–Speichern bleibt auch zwischen Prozessen serialisiert. Fehler rollen vollständig zurück. Die Transaktion endet im FastAPI-Funktionskontext vor dem Versand einer erfolgreichen Antwort. Erfolgreiche Befehle und Laden erzeugen eine neue Zustandsrevision; veraltete Handelsvorschauen liefern HTTP 409.
 
 Altdatenbanken mit `game_sessions` werden vor der Initialisierung abgewiesen. Keine Tabellenlöschung, kein Weltreset. Altimporte und Migrationen sind spätere Arbeitspakete.
 
