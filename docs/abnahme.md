@@ -41,6 +41,10 @@ Die native Bildschirmaufnahme des Automationswerkzeugs wird auf diesem Windows-B
 
 Mit dem abschließenden Installer geprüft: Ein zweiter Start bei belegtem Port zeigt einen verständlichen Windows-Dialog. Nach dessen Bestätigung endet nur die zweite Instanz; die zuerst gestartete Sitzung und ihr Backend bleiben unverändert erreichbar. Der beim Test gefundene Tauri-Setup-Abbruch wurde vor dem abschließenden Build korrigiert.
 
+Weitere Fehlerprüfungen bestanden: Ein vorzeitig endendes Backend und ein absichtlich nicht antwortender Testprozess führen zu verständlichen Meldungen. Nach dem 30-Sekunden-Timeout ist der eigene Testprozess beendet. Auch beim erzwungenen Ende der Hauptanwendung beendet das Windows-Jobobjekt deren Backend; der Port bleibt frei.
+
+MSI-Prüfsumme (SHA-256): `81d21e5bd86b4d7fd105357bbf225592c57fceefb63cbc4266b97d9e93a583d6`. Der Installer, die Prüfsummendatei und das Quellenarchiv der MPL-Komponenten sind als GitHub-Release-Entwurf vorbereitet.
+
 ## Noch offene Umgebungsabnahme
 
 Ein frisch aufgesetztes Windows ohne vorhandene WebView2 Runtime beziehungsweise eine frische Windows-VM ist hier nicht verfügbar. Erstinstallation dieser Runtime und ein vollständiger Bedienablauf auf einem solchen System sind deshalb **nicht als bestanden erklärt**. Eine öffentliche MSI-Freigabe setzt diesen Test oder die ausdrücklich akzeptierte Veröffentlichung als Alpha mit dieser Testlücke voraus.
