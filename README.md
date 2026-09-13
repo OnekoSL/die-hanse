@@ -2,7 +2,7 @@
 
 Historische Handelssimulation für Windows: vom Lübecker Kaufmann zum eigenen Handelshaus.
 
-**0.1.0-alpha.1 – in Abnahme.** Die Basis verbindet zwei Prototypen: elf Häfen, neun Grundwaren, freie Handelsfahrten, Kontore, Schiffsbau, Monatsberichte und benannte Spielstände.
+**[0.1.0-alpha.1 – öffentliche Vorabversion](https://github.com/OnekoSL/die-hanse/releases/tag/v0.1.0-alpha.1).** Die Basis verbindet zwei Prototypen: elf Häfen, neun Grundwaren, freie Handelsfahrten, Kontore, Schiffsbau, Monatsberichte und benannte Spielstände.
 
 ## Spielen
 

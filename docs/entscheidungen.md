@@ -17,6 +17,7 @@
 | Speicherung | Automatisch und mehrere benannte Plätze; nur neue Spiele |
 | Lizenz | PolyForm Noncommercial für Code; CC BY-NC für Dokumentation |
 | Auslieferung | Quellcode und Windows-x64-MSI als öffentliche Alpha |
+| Windows-Abnahme | Prüfung auf einem vorhandenen Windows-System genügt; ein frisch eingerichtetes System ist nach Klarstellung des Projektinhabers keine Freigabevoraussetzung |
 | Später | Verwalter, Automatik, Risiken, Verderb, Veredelung, Altimporte |
 
 Technische Festlegungen: Geld in ganzen Hundertstel-Mark; dynamische Abrechnung pro Einheit; revisionsgebundene Vorschau; vollständige geprüfte Snapshots; separate App-Kennung und Port; neue Karte/Symbole statt ungeklärter Vorgängermedien.

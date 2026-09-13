@@ -8,7 +8,7 @@
 | M1 | Eigenständiger Python-/React-/Tauri-Grundstand | Implementiert |
 | M2 | Ganzzahlgeld, verbindlicher Handel und sichere Speicherplätze | Implementiert; automatisiert geprüft |
 | M3 | Elf Städte, neun Waren, freie Fahrten, Karte, Kalender, Berichte und Bauzeiten | Implementiert; Browser geprüft |
-| Alpha 0.1 | Windows-Installer und öffentliche Vorabversion | In Abnahme |
+| Alpha 0.1 | Windows-Installer und öffentliche Vorabversion | Veröffentlicht als `v0.1.0-alpha.1` |
 | M4 | Bezahlte Verwalter und wiederkehrende Handelsaufträge | Anschließend separat planen |
 | M5 | Jahreszeiten, Reisegefahren und Schutz | Später |
 | M6 | Warenalter, Verderb und Veredelungspilot | Später |

@@ -1,6 +1,6 @@
 # Dokumentation
 
-Stand: 13. September 2026. Die erste Basis ist beschlossen und implementiert; die Auslieferung befindet sich in Abnahme.
+Stand: 13. September 2026. Die erste Basis ist implementiert und als öffentliche Vorabversion `v0.1.0-alpha.1` freigegeben.
 
 - [Spielkonzept und Regeln](spielkonzept.md)
 - [Architektur und Speicherung](architektur.md)

@@ -1,6 +1,6 @@
 # Abnahmeprotokoll – 0.1.0-alpha.1
 
-Stand: 13. September 2026. Implementierte Basis; öffentliche MSI-Freigabe wartet noch auf den unten genannten Umgebungstest oder eine ausdrücklich akzeptierte Testlücke.
+Stand: 13. September 2026. Die Basis ist zur öffentlichen Alpha-Veröffentlichung freigegeben. Der Projektinhaber hat klargestellt, dass die Windows-Abnahme kein frisch eingerichtetes System erfordert; die nachstehenden Prüfungen auf dem vorhandenen System genügen für diese Alpha.
 
 ## Automatisierte Prüfungen
 
@@ -44,11 +44,11 @@ Mit dem abschließenden Installer geprüft: Ein zweiter Start bei belegtem Port 
 
 Weitere Fehlerprüfungen bestanden: Ein vorzeitig endendes Backend und ein absichtlich nicht antwortender Testprozess führen zu verständlichen Meldungen. Nach dem 30-Sekunden-Timeout ist der eigene Testprozess beendet. Auch beim erzwungenen Ende der Hauptanwendung beendet das Windows-Jobobjekt deren Backend; der Port bleibt frei.
 
-MSI-Prüfsumme (SHA-256): `81d21e5bd86b4d7fd105357bbf225592c57fceefb63cbc4266b97d9e93a583d6`. Der Installer, die Prüfsummendatei und das Quellenarchiv der MPL-Komponenten sind als GitHub-Release-Entwurf vorbereitet.
+MSI-Prüfsumme (SHA-256): `81d21e5bd86b4d7fd105357bbf225592c57fceefb63cbc4266b97d9e93a583d6`. Der Installer, die Prüfsummendatei und das Quellenarchiv der MPL-Komponenten gehören zur [öffentlichen Vorabversion v0.1.0-alpha.1](https://github.com/OnekoSL/die-hanse/releases/tag/v0.1.0-alpha.1).
 
-## Noch offene Umgebungsabnahme
+## Umfang der Umgebungsabnahme
 
-Ein frisch aufgesetztes Windows ohne vorhandene WebView2 Runtime beziehungsweise eine frische Windows-VM ist hier nicht verfügbar. Erstinstallation dieser Runtime und ein vollständiger Bedienablauf auf einem solchen System sind deshalb **nicht als bestanden erklärt**. Eine öffentliche MSI-Freigabe setzt diesen Test oder die ausdrücklich akzeptierte Veröffentlichung als Alpha mit dieser Testlücke voraus.
+Die Abnahme erfolgte auf dem oben beschriebenen vorhandenen Windows-System. Ein frisch aufgesetztes Windows ohne WebView2 Runtime wurde nicht geprüft; insbesondere wird deren Erstinstallation nicht als getestet ausgegeben. Ein solcher zusätzlicher Umgebungstest ist nach Klarstellung des Projektinhabers keine Voraussetzung für die Veröffentlichung dieser Alpha. Die übrigen dokumentierten Prüfungen und Einschränkungen bleiben bestehen.
 
 ## Bekannte Einschränkungen
 
