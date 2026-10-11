@@ -6,6 +6,22 @@ Historische Handelssimulation für Windows: vom Lübecker Kaufmann zum eigenen H
 
 [Änderungen in Alpha 2](docs/aenderungen.md): direkte Warendetails und vollständige Schiffsladung.
 
+## Einblicke ins Spiel
+
+Die Bilder zeigen die aktuelle Vorabversion **0.1.0-alpha.2**.
+
+**Häfen erkunden und Waren handeln:** Die Karte verbindet elf Häfen. In der Handelsansicht stehen Marktbestände, Kauf- und Verkaufspreise sowie die eigene Schiffsladung nebeneinander. Hier liegen zehn Last Salz für die nächste Fahrt in der Lübecker Kogge.
+
+![Hafenkarte und Handelsansicht in Lübeck mit Marktpreisen, Warendetails und zehn Last Salz an Bord](docs/images/spiel-ueberblick.jpg)
+
+**Den Gesamtpreis vor dem Handel prüfen:** Die Handelsvorschau berechnet die gesamte gewählte Menge. Erst mit der Bestätigung wird der Kauf oder Verkauf ausgeführt.
+
+![Handelsvorschau für zehn Last Salz mit verbindlichem Gesamtpreis und Bestätigung](docs/images/handel-vorschau.jpg)
+
+**Reisen planen und die Flotte ausbauen:** Die Flottenansicht zeigt Ladung und Ankunftsdatum der eigenen Schiffe. In der Werft lassen sich zusätzliche Schiffe mit ausgewiesenen Kosten und Bauzeiten bestellen. Diese Kogge fährt gerade von Lübeck nach London.
+
+![Flottenverwaltung mit einer Kogge auf dem Weg nach London und der Werft für neue Schiffe](docs/images/flotte-und-reise.jpg)
+
 ## Spielen
 
 Vorabversionen: [GitHub Releases](https://github.com/OnekoSL/die-hanse/releases). Den Windows-x64-MSI installieren und **Die Hanse** starten. Python und Node.js sind zum Spielen nicht erforderlich. Windows benötigt die Microsoft WebView2 Runtime; der Installer berücksichtigt diese Voraussetzung. Nach Installation ist das Spiel offline nutzbar.
